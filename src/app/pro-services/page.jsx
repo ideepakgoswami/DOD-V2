@@ -185,16 +185,26 @@ const ProServices = () => {
 
   // Handle hash links by listening to location changes
   useEffect(() => {
-    const hash = location.hash.substring(1);
-    if (hash === "events" || hash === "fitness") {
-      setActiveCategory(hash);
-      const section = document.getElementById("services-category-toggle");
-      if (section) {
-        // Use a small timeout to ensure the DOM has updated before scrolling
-        setTimeout(() => section.scrollIntoView({ behavior: "smooth" }), 100);
+    if (typeof window === "undefined") return;
+
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash === "events" || hash === "fitness") {
+        setActiveCategory(hash);
+        const section = document.getElementById("services-category-toggle");
+        if (section) {
+          setTimeout(() => section.scrollIntoView({ behavior: "smooth" }), 100);
+        }
       }
-    }
-  }, [location.hash]); // Re-run this effect whenever the hash changes
+    };
+
+    // Run once on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []); 
 
   const containerVariants = {
     hidden: { opacity: 0 },

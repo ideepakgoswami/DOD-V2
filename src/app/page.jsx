@@ -37,7 +37,7 @@ const Home = () => {
       subtitle: "Delhi’s Home for Professional Dance",
       description: "Comprehensive training programs designed to transform passionate beginners into professional performers.",
       ctas: [
-        { text: "Start Training", link: "/academy", primary: true },
+        { text: "Start Training", link: "/training", primary: true },
         { text: "View Programs", link: "/pro-services", primary: false },
       ],
     },
@@ -140,17 +140,17 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
     {
       id: 1,
       name: "Vinod Kashyap",
-      role: "Founder & Lead Choreographer",
-      style: "Hip Hop & Bollywood",
-      experience: "15+ Years Experience",
+      role: "Founder & Master Choreographer",
+      style: "All Dance Forms",
+      experience: "15+ Years of Industry Excellence",
       image: vinodPhoto.src,
     },
     {
       id: 2,
       name: "Ravi",
-      role: "Senior Instructor",
+      role: "Instructor",
       style: "Zumba & Fitness",
-      experience: "8+ Years Experience",
+      experience: "4+ Years Experience",
       image: raviPhoto.src,
     },
   ];
@@ -346,19 +346,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
           </div>
         </div>
 
-        {/* Slide Indicators (Dots) */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex space-x-3">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-500 ${
-                activeSlide === index ? "w-8 bg-gold" : "bg-white/30 hover:bg-white/50"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+
 
         {/* Scroll Indicator */}
         {/* <motion.div
@@ -498,7 +486,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
               { number: "1500+", label: "Students Trained" },
               { number: "1000+", label: "Dance Choreographies" },
               { number: "500+", label: "Wedding Choreographies" },
-              { number: "14", label: "Elite Instructors" },
+              { number: "15+", label: "Years of Excellence" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

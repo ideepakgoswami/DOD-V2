@@ -395,7 +395,7 @@ const Story = () => {
                   15+
                 </h3>
                 <p className="text-ivory/70 font-light uppercase tracking-widest text-sm">
-                  Expert Instructors
+                  Years of Excellence
                 </p>
               </motion.div>
 
@@ -436,12 +436,12 @@ const Story = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
-              href="/academy"
+              href="/training"
               className="group relative px-10 py-4 overflow-hidden border-2 border-gold transition-all duration-300 hover:shadow-luxury-gold rounded-lg"
             >
               <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-0" />
               <span className="relative z-10 text-gold group-hover:text-charcoal transition-colors uppercase tracking-widest text-sm font-bold">
-                Explore Classes
+                Explore Training
               </span>
             </Link>
 

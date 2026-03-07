@@ -9,7 +9,7 @@ const Connect = () => {
     lastName: "",
     email: "",
     phone: "",
-    interestedIn: "Academy Classes",
+    interestedIn: "Training Classes",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,7 +33,7 @@ const Connect = () => {
         lastName: "",
         email: "",
         phone: "",
-        interestedIn: "Academy Classes",
+        interestedIn: "Training Classes",
         message: "",
       });
 
@@ -131,7 +131,7 @@ const Connect = () => {
           </h1>
           <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
           <p className="max-w-3xl mx-auto text-ivory/70 text-lg font-light leading-relaxed">
-            Have questions about our academy, pro services, or want to discuss
+            Have questions about our training, pro services, or want to discuss
             your event? We're here to help bring your vision to life.
           </p>
         </motion.div>
@@ -234,7 +234,7 @@ const Connect = () => {
               </h2>
               <div className="h-1 w-20 bg-gradient-to-r from-gold via-gold to-transparent mb-8" />
               <p className="text-ivory/70 text-lg font-light leading-relaxed">
-                Whether you're interested in joining our academy, booking pro
+                Whether you're interested in joining our training, booking pro
                 services, or just want to chat about dance, we'd love to hear
                 from you.
               </p>
@@ -252,7 +252,7 @@ const Connect = () => {
                 },
                 {
                   title: "Trial Classes",
-                  desc: "First class free for new academy students",
+                  desc: "First class free for new training students",
                 },
               ].map((item, idx) => (
                 <motion.div
@@ -391,7 +391,7 @@ const Connect = () => {
                       onChange={handleInputChange}
                       className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40"
                     >
-                      <option value="Academy Classes">Academy Classes</option>
+                      <option value="Training Classes">Training Classes</option>
                       <option value="Wedding Choreography">
                         Wedding Choreography
                       </option>
@@ -456,31 +456,53 @@ const Connect = () => {
         </div>
       </section>
 
-      {/* Map Placeholder Section */}
+      {/* Map Section */}
       <section className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative h-96 rounded-2xl border-2 border-gold/20 overflow-hidden shadow-elegant"
+          className="relative h-[500px] rounded-3xl border-2 border-gold/20 overflow-hidden shadow-elegant group"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/60 to-charcoal/80 flex items-center justify-center">
-            <div className="text-center z-10">
-              <MapPin className="w-16 h-16 text-gold/40 mx-auto mb-6" />
-              <h3 className="text-2xl font-cinzel font-bold text-ivory mb-4">
-                Visit Our Studio
-              </h3>
-              <p className="text-ivory/60 text-sm font-light max-w-md">
-                123 Artistic Boulevard, Culture District
-                <br />
-                New Delhi - 110001
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="mt-8 px-8 py-3 border border-gold/40 hover:border-gold text-gold hover:text-ivory transition-all duration-300 uppercase tracking-widest text-xs font-semibold rounded-lg"
-              >
-                Get Directions
-              </motion.button>
+          {/* Map Overlay for branding feel */}
+          <div className="absolute inset-0 bg-gold/5 mix-blend-color pointer-events-none z-10" />
+          
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.5976510343715!2d77.25608697550228!3d28.686153075635815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc091936c64b%3A0xc4868448eb52c803!2sBrahampuri%2C%20Delhi!5e0!3m2!1sen!2sin!4v1709850000000!5m2!1sen!2sin"
+            width="100%" 
+            height="100%" 
+            style={{ 
+              border: 0, 
+              filter: "brightness(0.7) contrast(1.2) sepia(0.2) saturate(1.4) hue-rotate(-15deg)" 
+            }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="transition-all duration-700 group-hover:brightness-90"
+          ></iframe>
+
+          {/* Location Info Card */}
+          <div className="absolute bottom-8 left-8 right-8 md:right-auto z-20">
+            <div className="bg-charcoal/95 backdrop-blur-xl p-6 rounded-2xl border border-gold/30 shadow-2xl max-w-sm">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-xl bg-gold/10 border border-gold/20">
+                  <MapPin className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <h4 className="font-cinzel font-bold text-gold mb-2 tracking-wide">Dream of Dance Studio</h4>
+                  <p className="text-ivory/70 text-xs font-light leading-relaxed">
+                    G-13, Street No. 6, near Moni Baba Mandir, Block I, Brahampuri, Delhi-110053
+                  </p>
+                  <a 
+                    href="https://maps.google.com/?q=G-13, Street No. 6, Brahampuri, Delhi-110053" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="inline-block mt-4 text-[10px] uppercase tracking-[0.2em] text-gold font-bold hover:text-ivory transition-all"
+                  >
+                    Open in Maps →
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>

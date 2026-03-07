@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const menuItems = [
     { title: "Home", path: "/" },
-    { title: "Academy", path: "/academy" },
+    { title: "Training", path: "/training" },
     { title: "Gallery", path: "/gallery" },
     { title: "Our Story", path: "/story" },
     { title: "Connect", path: "/connect" },

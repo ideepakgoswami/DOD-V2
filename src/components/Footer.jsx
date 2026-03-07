@@ -11,17 +11,13 @@ import {
   Zap,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import logo from "../assets/images/logo_final.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    // {
-    //   icon: Instagram,
-    //   label: "Instagram DOD",
-    //   href: "https://www.instagram.com/dod_studio_kn/",
-    // },
     {
       icon: Instagram,
       label: "Instagram Dream of Dance",
@@ -43,33 +39,38 @@ const Footer = () => {
     {
       title: "Locations",
       items: [
-        "G-13, Street No. 6, near Moni Baba Mandir, Block I, Brahampuri, Delhi-110053",
-        // "Branch 2: Coming Soon",
+        { 
+          text: "G-13, Street No. 6, near Moni Baba Mandir, Block I, Brahampuri, Delhi-110053", 
+          href: "https://maps.google.com/?q=G-13, Street No. 6, Brahampuri, Delhi-110053" 
+        }
       ],
       icon: MapPin,
     },
     {
       title: "Contact",
-      items: ["dod@dreamofdancestudio.com", "+919560832548"],
+      items: [
+        { text: "dod@dreamofdancestudio.com", href: "mailto:dod@dreamofdancestudio.com" },
+        { text: "+91 9560832548", href: "tel:+919560832548" }
+      ],
       icon: Mail,
     },
     {
-      title: "What We Offer",
+      title: "Programs",
       items: [
-        "Wedding Choreography",
-        "Dance Competitions",
-        "Workshops",
-        "Fitness Classes",
+        { text: "Wedding Choreography", href: "/training" },
+        { text: "Dance Competitions", href: "/pro-services" },
+        { text: "Workshops", href: "/pro-services" },
+        { text: "Fitness Classes", href: "/pro-services#fitness" },
       ],
       icon: Music,
     },
     {
       title: "Specialties",
       items: [
-        "School Events",
-        "College Events",
-        "Dance Events",
-        "Masterclasses",
+        { text: "School Events", href: "/pro-services#events" },
+        { text: "College Events", href: "/pro-services#events" },
+        { text: "Dance Events", href: "/pro-services#events" },
+        { text: "Masterclasses", href: "/pro-services" },
       ],
       icon: Zap,
     },
@@ -112,11 +113,13 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center mb-10"
         >
-          <Image
-            src={logo}
-            alt="Dream of Dance Studio Logo"
-            className="h-20 w-auto object-contain mb-4"
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="Dream of Dance Studio Logo"
+              className="h-20 w-auto object-contain mb-4 hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
           <p className="text-gold tracking-[0.4em] uppercase text-xs font-light">
             Dream of Dance Studio
           </p>
@@ -130,7 +133,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex justify-center gap-6 mb-12 flex-wrap"
         >
-          {socialLinks.map((social, index) => {
+          {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
               <motion.a
@@ -143,7 +146,6 @@ const Footer = () => {
                 className="relative w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center text-gold/70 hover:text-gold hover:border-gold transition-all duration-300 group overflow-hidden"
                 aria-label={social.label}
               >
-                {/* Background glow on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full" />
                 <Icon
                   size={26}
@@ -169,7 +171,7 @@ const Footer = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex flex-col items-center text-center group"
+                className="flex flex-col items-center text-center group w-full"
               >
                 {Icon && (
                   <div className="mb-4 p-3 rounded-lg bg-gold/10 border border-gold/20 group-hover:border-gold/50 transition-all duration-300">
@@ -179,14 +181,27 @@ const Footer = () => {
                 <h5 className="font-cinzel text-gold tracking-widest text-sm uppercase font-semibold mb-4">
                   {section.title}
                 </h5>
-                <div className="space-y-2">
+                <div className="space-y-3 flex flex-col items-center">
                   {section.items.map((item, idx) => (
-                    <p
-                      key={idx}
-                      className="text-xs text-ivory/60 leading-relaxed font-light hover:text-gold transition-colors duration-300"
-                    >
-                      {item}
-                    </p>
+                    item.href.startsWith("http") || item.href.startsWith("mailto") || item.href.startsWith("tel") ? (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="text-xs text-ivory/60 leading-relaxed font-light hover:text-gold transition-colors duration-300 max-w-[200px]"
+                      >
+                        {item.text}
+                      </a>
+                    ) : (
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        className="text-xs text-ivory/60 leading-relaxed font-light hover:text-gold transition-colors duration-300"
+                      >
+                        {item.text}
+                      </Link>
+                    )
                   ))}
                 </div>
               </motion.div>
@@ -209,17 +224,17 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center space-x-6 text-[11px] text-ivory/40 uppercase tracking-widest font-light">
-            <button className="hover:text-gold transition-colors duration-300">
+            <Link href="/privacy" className="hover:text-gold transition-colors duration-300">
               Privacy
-            </button>
+            </Link>
             <span className="text-gold/20">•</span>
-            <button className="hover:text-gold transition-colors duration-300">
+            <Link href="/terms" className="hover:text-gold transition-colors duration-300">
               Terms
-            </button>
+            </Link>
             <span className="text-gold/20">•</span>
-            <button className="hover:text-gold transition-colors duration-300">
+            <Link href="/sitemap" className="hover:text-gold transition-colors duration-300">
               Sitemap
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>
