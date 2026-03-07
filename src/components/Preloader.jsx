@@ -57,7 +57,7 @@ export default function Preloader() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mt-6 text-xs tracking-[0.4em] uppercase font-montserrat text-ivory"
             >
-              Loading Experience
+              Dream of Dance Studio
             </motion.p>
           </motion.div>
         </motion.div>

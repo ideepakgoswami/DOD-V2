@@ -84,16 +84,17 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-charcoal-light/90 backdrop-blur-lg border border-gold/30 rounded-lg shadow-lg"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 bg-charcoal/95 backdrop-blur-xl border border-gold/30 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
                     >
-                      <div className="p-2">
+                      <div className="p-2 space-y-1">
                         {proServicesMenuItems.map((item) => (
                           <Link
                             key={item.path}
                             href={item.path}
                             onClick={() => setProServicesDropdown(false)}
-                            className="block px-4 py-2 text-sm text-ivory/80 hover:bg-gold/10 hover:text-gold rounded-md transition-colors"
+                            className="group flex items-center px-4 py-3 text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-all duration-300 hover:bg-gold/5"
                           >
+                            <span className="w-0 group-hover:w-2 h-[1px] bg-gold mr-0 group-hover:mr-3 transition-all duration-300" />
                             {item.title}
                           </Link>
                         ))}
@@ -106,7 +107,7 @@ const Navbar = () => {
 
             {/* Mobile Toggle */}
             <button
-              className="md:hidden text-gold"
+              className="md:hidden text-gold hover:scale-110 active:scale-90 transition-transform"
               onClick={() => setIsOpen(true)}
             >
               <Menu size={28} />
@@ -119,57 +120,84 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-[100] bg-charcoal"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-charcoal/98 backdrop-blur-[70px]"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
+            {/* Background Texture */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent pointer-events-none" />
+
             {/* Close button */}
             <button
-              className="absolute top-6 right-6 text-gold"
+              className="absolute top-8 right-8 text-gold hover:rotate-90 transition-transform duration-300"
               onClick={() => setIsOpen(false)}
             >
-              <X size={32} />
+              <X size={36} />
             </button>
 
-            <div className="flex h-full flex-col items-center justify-center gap-10">
+            <div className="flex h-full flex-col items-center justify-center gap-8 px-10">
               {menuItems.map((item, i) => (
                 <motion.div
                   key={item.path}
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: i * 0.06 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="w-full text-center"
                 >
                   <Link
                     href={item.path}
                     onClick={() => setIsOpen(false)}
-                    className="text-2xl font-cinzel tracking-widest text-gold hover:text-ivory"
+                    className="text-3xl font-cinzel tracking-[0.2em] text-gold hover:text-ivory transition-colors inline-block pb-1 border-b border-transparent hover:border-gold/30"
                   >
                     {item.title}
                   </Link>
                 </motion.div>
               ))}
-              {/* Pro Services Mobile */}
-              <div className="text-center">
-                <p className="text-2xl font-cinzel tracking-widest text-ivory/70 mb-4">
+
+              {/* Pro Services Mobile Dropdown */}
+              <div className="w-full text-center">
+                <button 
+                  onClick={() => setProServicesDropdown(!proServicesDropdown)}
+                  className="flex items-center justify-center gap-4 mx-auto text-3xl font-cinzel tracking-[0.2em] text-gold hover:text-ivory outline-none"
+                >
                   Pro Services
-                </p>
-                {proServicesMenuItems.map((item, i) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: (menuItems.length + i) * 0.06 }}
-                  >
-                    <Link
-                      href={item.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block py-2 text-xl font-cinzel tracking-widest text-gold hover:text-ivory"
+                  <ChevronDown 
+                    size={28} 
+                    className={`transition-transform duration-500 text-gold/50 ${proServicesDropdown ? "rotate-180 text-gold" : ""}`} 
+                  />
+                </button>
+                
+                <AnimatePresence>
+                  {proServicesDropdown && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden mt-6"
                     >
-                      {item.title}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <div className="flex flex-col gap-6 py-6 bg-gold/5 rounded-3xl mx-4 border border-gold/10">
+                        {proServicesMenuItems.map((item, i) => (
+                          <motion.div
+                            key={item.path}
+                            initial={{ x: -20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: i * 0.1 }}
+                          >
+                            <Link
+                              href={item.path}
+                              onClick={() => setIsOpen(false)}
+                              className="text-sm border-b border-gold/10 pb-2 uppercase tracking-[0.5em] text-ivory/60 hover:text-gold transition-colors inline-block"
+                            >
+                              {item.title}
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </motion.div>

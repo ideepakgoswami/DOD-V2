@@ -85,7 +85,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -217,15 +217,15 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
   return (
     <div className="relative overflow-hidden font-montserrat">
       {/* Hero Slider Section - Custom Heights */}
-      <section className="relative w-full h-[65vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-screen lg:h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Slides Container */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={activeSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
             {/* Background Image */}
@@ -241,7 +241,8 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
         </AnimatePresence>
 
         {/* Content */}
-        <motion.div
+        <AnimatePresence mode="wait">
+          <motion.div
           key={`content-${activeSlide}`}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -320,25 +321,44 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
             ))}
           </motion.div>
         </motion.div>
+      </AnimatePresence>
 
         {/* Navigation Arrows */}
-        <motion.button
-          whileHover={{ opacity: 1, scale: 1.05 }}
-          onClick={prevSlide}
-          className="absolute left-2 md:left-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/60 hover:border-gold hover:bg-charcoal/80 flex items-center justify-center text-gold hover:text-ivory transition-colors duration-300 bg-charcoal/40 backdrop-blur-md opacity-90 hover:opacity-100 active:opacity-75"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={24} />
-        </motion.button>
+        <div className="absolute bottom-20 left-0 right-0 md:top-1/2 md:bottom-auto md:transform md:-translate-y-1/2 z-20 flex justify-center md:block px-6 md:px-0">
+          <div className="flex items-center gap-12 md:block">
+            <motion.button
+              whileHover={{ opacity: 1 }}
+              onClick={prevSlide}
+              className="md:absolute md:left-6 w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/40 hover:border-gold hover:bg-charcoal/80 flex items-center justify-center text-gold hover:text-ivory transition-all duration-300 bg-charcoal/20 backdrop-blur-md opacity-70 hover:opacity-100"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft size={24} />
+            </motion.button>
 
-        <motion.button
-          whileHover={{ opacity: 1, scale: 1.05 }}
-          onClick={nextSlide}
-          className="absolute right-2 md:right-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/60 hover:border-gold hover:bg-charcoal/80 flex items-center justify-center text-gold hover:text-ivory transition-colors duration-300 bg-charcoal/40 backdrop-blur-md opacity-90 hover:opacity-100 active:opacity-75"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={24} />
-        </motion.button>
+            <motion.button
+              whileHover={{ opacity: 1 }}
+              onClick={nextSlide}
+              className="md:absolute md:right-6 w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/40 hover:border-gold hover:bg-charcoal/80 flex items-center justify-center text-gold hover:text-ivory transition-all duration-300 bg-charcoal/20 backdrop-blur-md opacity-70 hover:opacity-100"
+              aria-label="Next slide"
+            >
+              <ChevronRight size={24} />
+            </motion.button>
+          </div>
+        </div>
+
+        {/* Slide Indicators (Dots) */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex space-x-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-500 ${
+                activeSlide === index ? "w-8 bg-gold" : "bg-white/30 hover:bg-white/50"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
 
         {/* Scroll Indicator */}
         {/* <motion.div
@@ -411,14 +431,15 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
               >
                 <Link
                   href="/story"
-                  className="inline-flex items-center text-gold hover:text-ivory transition-all duration-300 group text-sm uppercase tracking-widest font-bold px-6 py-3 border border-gold/30 rounded-full hover:border-gold hover:bg-gold/10"
+                  className="inline-flex items-center text-gold hover:text-white transition-all duration-300 group text-sm uppercase tracking-[0.3em] font-bold py-4"
                 >
-                  <span className="border-b-2 border-gold group-hover:border-ivory transition-colors pb-1">
+                  <span className="relative">
                     Our Studio Story
+                    <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-gold/50 group-hover:bg-white transition-colors" />
                   </span>
                   <ChevronRight
-                    className="ml-3 group-hover:translate-x-2 transition-transform"
-                    size={18}
+                    className="ml-4 group-hover:translate-x-2 transition-transform"
+                    size={20}
                   />
                 </Link>
               </motion.div>
@@ -485,12 +506,12 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="space-y-4 p-8 bg-transparent border-t border-gold/40 hover:border-gold transition-all duration-500"
+                className="space-y-2 p-4 md:p-8 bg-transparent border-t border-gold/30 hover:border-gold transition-all duration-500 flex flex-col justify-center min-h-[140px]"
               >
-                <h3 className="text-4xl md:text-5xl font-cinzel text-gold font-light">
+                <h3 className="text-3xl md:text-5xl font-cinzel text-gold font-light">
                   {stat.number}
                 </h3>
-                <p className="text-ivory/60 text-sm uppercase tracking-widest font-light">
+                <p className="text-ivory/50 text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium">
                   {stat.label}
                 </p>
               </motion.div>
@@ -832,7 +853,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 height="650"
                 frameBorder="0"
                 scrolling="no"
-                allowTransparency="true"
+                allowtransparency="true"
                 allow="encrypted-media"
                 className="border-none bg-transparent max-w-full"
               ></iframe>

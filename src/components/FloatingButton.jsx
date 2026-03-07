@@ -2,18 +2,42 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Phone, Mail } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const FloatingButton = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasPassedDelay, setHasPassedDelay] = useState(false);
 
+  // 1. Run the initial delay ONLY ONCE when the app loads
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000); // 5-second delay
-
+      setHasPassedDelay(true);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  // 2. Handle visibility sync based on page and scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      
+      if (pathname === "/") {
+        // On Homepage: Only visible if scrolled > 300 AND timer finished
+        setIsVisible(scrollPosition >= 300 && hasPassedDelay);
+      } else {
+        // On Other Pages: Visible as soon as the initial timer finishes
+        setIsVisible(hasPassedDelay);
+      }
+    };
+
+    // Immediate check on page change
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname, hasPassedDelay]);
 
   const [formData, setFormData] = useState({
     name: "",
