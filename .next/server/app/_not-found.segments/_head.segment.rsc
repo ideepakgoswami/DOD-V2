@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/7738b2b176cf8288.js","/_next/static/chunks/e7b82c4ad2bf3a19.js","/_next/static/chunks/eb9210c505f76962.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/7738b2b176cf8288.js","/_next/static/chunks/e7b82c4ad2bf3a19.js","/_next/static/chunks/eb9210c505f76962.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"aNc0Z8SImTOhiwyu6MtoR","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Dream of Dance Studio | Professional Dance Training in Delhi"}],["$","meta","1",{"name":"description","content":"Join Dream of Dance. Train. Perform. Compete. Delhi's home for professional dance, fitness, zumba, aerobics, and event choreography."}]]}]}]}],null]}],"loading":null,"isPartial":false}

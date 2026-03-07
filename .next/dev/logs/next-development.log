@@ -1,0 +1,2426 @@
+[00:00:00.540] Server  LOG     ✓ Ready in 360ms
+[00:00:25.727] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:17.728] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:03:12.465] Server  LOG     ✓ Compiled in 402ms
+[00:04:06.367] Server  LOG     ✓ Compiled in 150ms
+[00:05:50.898] Server  LOG     ✓ Compiled in 89ms
+[00:06:05.817] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.824] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.826] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.829] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.832] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.834] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.835] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.837] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.841] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.843] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.844] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.846] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.850] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.852] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.853] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.854] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.858] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.863] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.866] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.868] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.871] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.873] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.874] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.876] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.878] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.880] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.882] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.885] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.889] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.893] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.895] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.897] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.933] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.946] Server  LOG     ✓ Compiled in 324ms
+[00:06:05.948] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.949] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.950] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.952] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:05.964] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:06.358] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:07.458] Browser ERROR   uncaughtError: Error: ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:08.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:08.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:08.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:08.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:08.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:12.360] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:15.361] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:33.335] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:33.514] Browser ERROR   uncaughtError: Error: ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:33.688] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:33.688] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:33.688] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:33.688] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:33.688] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:34.408] Server  ERROR   ⨯ ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:34.548] Browser ERROR   uncaughtError: Error: ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:06:34.702] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:34.702] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:34.702] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:34.702] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:34.702] Browser ERROR   ./src/components/Preloader.jsx:5:1
+Module not found: Can't resolve '../assets/images/logo.png'
+  3 | import { motion, AnimatePresence } from "framer-motion";
+  4 | import Image from "next/image";
+> 5 | import logo from "../assets/images/logo.png"; // Ensure this matches actual path
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Preloader() {
+  8 |   const [loading, setLoading] = useState(true);
+
+Import trace:
+  Server Component:
+    ./src/components/Preloader.jsx
+    ./src/app/layout.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:06:59.895] Server  LOG     ✓ Compiled in 124ms
+[00:07:31.014] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:08:08.455] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:09.360] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:20.061] Server  LOG     ✓ Compiled in 239ms
+[00:09:25.958] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:26.238] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:10:43.056] Server  LOG     ✓ Compiled in 359ms
+[00:10:44.869] Server  LOG     ✓ Compiled in 121ms
+[00:57:54.503] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:57:54.840] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:11:55.265] Server  LOG     ✓ Compiled in 814ms
+[01:30:00.747] Server  LOG     ✓ Compiled in 816ms
+[01:30:02.764] Server  LOG     ✓ Compiled in 539ms
+[01:30:03.107] Server  LOG     ✓ Compiled in 0ms
+[01:30:03.696] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:30:04.978] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:40:48.922] Server  LOG     ✓ Compiled in 715ms
+[01:40:49.879] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:40:50.979] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[24:44:39.146] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:44:39.413] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[24:47:29.559] Server  LOG     ✓ Compiled in 260ms
+[24:47:47.842] Server  LOG     ✓ Compiled in 102ms
+[27:22:51.196] Server  LOG     ✓ Compiled in 407ms
+[27:25:15.037] Server  LOG     ✓ Compiled in 275ms
+[27:25:38.988] Server  LOG     ✓ Compiled in 155ms
+[27:31:47.222] Server  LOG     ✓ Compiled in 101ms
+[27:32:11.434] Server  LOG     ✓ Compiled in 383ms
+[27:32:23.691] Server  LOG     ✓ Compiled in 87ms
+[27:32:27.274] Server  LOG     ✓ Compiled in 66ms
+[27:33:32.938] Server  LOG     ✓ Compiled in 391ms
+[27:34:30.446] Server  LOG     ✓ Compiled in 111ms
+[27:35:12.770] Server  LOG     ✓ Compiled in 93ms
+[27:35:52.049] Server  LOG     ✓ Compiled in 102ms
+[27:36:10.848] Server  LOG     ✓ Compiled in 83ms
+[27:36:22.079] Server  LOG     ✓ Compiled in 93ms
+[27:37:43.235] Server  LOG     ✓ Compiled in 102ms
+[28:53:57.256] Server  LOG     ✓ Compiled in 469ms
+[28:53:57.531] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. allowTransparency allowtransparency
+[28:55:20.751] Server  LOG     ✓ Compiled in 222ms
+[28:55:52.052] Server  LOG     ✓ Compiled in 88ms
+[28:56:31.635] Server  LOG     ✓ Compiled in 184ms
+[28:58:18.160] Server  LOG     ✓ Compiled in 161ms
+[28:58:19.054] Server  LOG     ✓ Compiled in 127ms
+[28:59:19.795] Server  LOG     ✓ Compiled in 1363ms
+[29:00:10.523] Server  LOG     ✓ Compiled in 401ms
+[29:00:47.133] Server  LOG     ✓ Compiled in 799ms
+[29:02:32.110] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[29:02:32.110] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'substring')
+[29:02:42.834] Server  ERROR   React does not recognize the `allowTransparency` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `allowtransparency` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+[29:02:43.251] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:02:43.621] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. allowTransparency allowtransparency
+[29:02:43.621] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[29:05:06.615] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[29:06:48.428] Server  LOG     ✓ Compiled in 127ms
+[29:08:34.610] Server  LOG     ✓ Compiled in 142ms
+[29:08:48.513] Server  LOG     ✓ Compiled in 102ms
+[29:09:07.203] Server  LOG     ✓ Compiled in 94ms
+[29:15:21.099] Server  LOG     ✓ Compiled in 248ms
+[29:15:21.561] Browser ERROR   ./src/app/page.jsx:339:26
+Parsing ecmascript source code failed
+  337 |                 </Link>
+  338 |               </motion.div>
+> 339 |             </motion.div>
+      |                          ^
+> 340 |             <motion.div
+      | ^^^^^^^^^^^^^
+  341 |               initial={{ opacity: 0, x: -60 }}
+  342 |               whileInView={{ opacity: 1, x: 0 }}
+  343 |               viewport={{ once: true }}
+
+Expected '</', got 'jsx text'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+[29:16:09.054] Server  LOG     ✓ Compiled in 388ms
+[29:16:38.847] Server  LOG     ✓ Compiled in 204ms
+[29:19:32.683] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:19:33.002] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. allowTransparency allowtransparency
+[29:19:33.002] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[29:25:35.431] Server  LOG     ✓ Compiled in 188ms
+[29:26:02.216] Server  LOG     ✓ Compiled in 150ms
+[29:27:31.277] Server  LOG     ✓ Compiled in 538ms
+[29:27:51.343] Server  LOG     ✓ Compiled in 176ms
+[29:28:32.779] Server  LOG     ✓ Compiled in 655ms
+[29:28:52.980] Server  LOG     ✓ Compiled in 356ms
+[29:29:30.564] Server  LOG     ✓ Compiled in 117ms
+[29:31:53.591] Server  LOG     ✓ Compiled in 227ms
+[29:33:01.991] Server  LOG     ✓ Compiled in 2.1s
+[29:33:02.099] Browser ERROR   ./src/app/page.jsx:102:3
+Parsing ecmascript source code failed
+  100 |
+  101 |   const dancePrograms = [
+> 102 |   const dancePrograms = [
+      |   ^^^^^
+  103 |     {
+  104 |       id: 1,
+  105 |       title: "Hip-Hop",
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+[29:33:21.790] Server  LOG     ✓ Compiled in 323ms
+[29:33:42.380] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[29:34:51.212] Server  LOG     ✓ Compiled in 326ms
+[29:36:00.969] Server  LOG     ✓ Compiled in 318ms
+[29:37:08.728] Server  LOG     ✓ Compiled in 167ms
+[29:37:24.932] Server  LOG     ✓ Compiled in 299ms
+[29:37:42.513] Server  LOG     ✓ Compiled in 215ms
+[29:38:30.825] Server  LOG     ✓ Compiled in 389ms
+[29:39:22.243] Server  LOG     ✓ Compiled in 124ms
+[29:39:31.513] Server  LOG     ✓ Compiled in 112ms
+[29:39:39.383] Server  LOG     ✓ Compiled in 154ms
+[29:40:46.275] Server  LOG     ✓ Compiled in 343ms
+[29:48:48.788] Server  LOG     ✓ Compiled in 423ms
+[29:49:09.304] Server  LOG     ✓ Compiled in 102ms
+[29:49:16.146] Server  LOG     ✓ Compiled in 110ms
+[29:50:09.833] Server  LOG     ✓ Compiled in 468ms
+[30:55:41.939] Server  LOG     ✓ Compiled in 400ms
+[30:55:59.219] Server  LOG     ✓ Compiled in 117ms
+[30:56:04.275] Server  LOG     ✓ Compiled in 124ms
+[30:56:16.835] Server  LOG     ✓ Compiled in 124ms
+[31:00:42.971] Server  LOG     ✓ Compiled in 112ms
+[31:01:48.705] Server  LOG     ✓ Compiled in 158ms
+[31:01:55.761] Server  LOG     ✓ Compiled in 124ms
+[31:02:41.284] Server  LOG     ✓ Compiled in 113ms
+[31:03:07.803] Server  LOG     ✓ Compiled in 211ms
+[31:04:50.418] Server  LOG     ✓ Compiled in 138ms
+[31:05:03.856] Server  LOG     ✓ Compiled in 126ms
+[31:06:36.979] Server  LOG     ✓ Compiled in 124ms
+[31:11:45.996] Server  LOG     ✓ Compiled in 122ms
+[31:15:31.674] Server  LOG     ✓ Compiled in 122ms
+[31:17:27.560] Server  LOG     ✓ Compiled in 117ms
+[31:25:11.555] Server  LOG     ✓ Compiled in 378ms
+[31:26:08.817] Server  LOG     ✓ Compiled in 130ms
+[31:26:58.976] Server  LOG     ✓ Compiled in 150ms
+[31:30:11.350] Server  LOG     ✓ Compiled in 1434ms
+[32:28:01.373] Server  LOG     ✓ Compiled in 495ms
+[32:31:01.958] Server  LOG     ✓ Compiled in 713ms
+[32:33:24.301] Server  LOG     ✓ Compiled in 256ms
+[32:36:29.857] Server  LOG     ✓ Compiled in 248ms
+[32:39:22.860] Server  LOG     ✓ Compiled in 229ms
+[32:44:00.516] Server  LOG     ✓ Compiled in 460ms
+[32:49:56.807] Server  LOG     ✓ Compiled in 968ms
+[32:50:52.179] Server  LOG     ✓ Compiled in 332ms
+[32:55:24.324] Server  LOG     ✓ Compiled in 329ms
+[32:55:31.030] Server  LOG     ✓ Compiled in 184ms
+[32:55:41.374] Server  LOG     ✓ Compiled in 239ms
+[32:55:47.583] Server  LOG     ✓ Compiled in 388ms
+[33:54:26.707] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.716] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.720] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.724] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.731] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.737] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.761] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.770] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.775] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.778] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.782] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.786] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.793] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.798] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.802] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.809] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.813] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.817] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.822] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.830] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.833] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.838] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.840] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.844] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.850] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.856] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.862] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.865] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.874] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.877] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.882] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.885] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.889] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.893] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.901] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.904] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.911] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.914] Server  ERROR   ⨯ ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.918] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.923] Server  ERROR   ⨯ ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.930] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:26.934] Server  ERROR   ⨯ ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[33:54:27.852] Browser ERROR   ./src/app/page.jsx:26:1
+Module not found: Can't resolve '../assets/images/competition.jpg'
+  24 | import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+> 26 | import Competition from "../assets/images/competition.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[33:54:27.852] Browser ERROR   ./src/app/page.jsx:27:1
+Module not found: Can't resolve '../assets/images/summer-camp.jpg'
+  25 | import raviPhoto from "../assets/images/ravi.webp";
+  26 | import Competition from "../assets/images/competition.jpg";
+> 27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  28 | import Workshop from "../assets/images/workshop.jpg";
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[33:54:27.852] Browser ERROR   ./src/app/page.jsx:28:1
+Module not found: Can't resolve '../assets/images/workshop.jpg'
+  26 | import Competition from "../assets/images/competition.jpg";
+  27 | import Summer_Camp from "../assets/images/summer-camp.jpg";
+> 28 | import Workshop from "../assets/images/workshop.jpg";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  29 | const Home = () => {
+  30 |   const [activeSlide, setActiveSlide] = useState(0);
+  31 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.jsx [Client Component Browser]
+    ./src/app/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.jsx [Client Component SSR]
+    ./src/app/page.jsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[33:55:01.821] Server  LOG     ✓ Compiled in 285ms
+[33:55:39.259] Server  LOG     ✓ Compiled in 285ms
+[33:55:46.808] Server  LOG     ✓ Compiled in 133ms
+[33:55:57.013] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[33:55:57.422] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. allowTransparency allowtransparency
+[33:55:57.423] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[33:56:44.792] Server  LOG     ✓ Compiled in 149ms
+[33:57:31.075] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[33:57:32.772] Server  LOG     ✓ Compiled in 174ms
+[35:24:25.395] Server  LOG     ✓ Compiled in 752ms
+[35:24:32.525] Server  LOG     ✓ Compiled in 329ms
+[35:26:13.241] Server  LOG     ✓ Compiled in 745ms
+[35:26:33.914] Server  LOG     ✓ Compiled in 121ms
+[35:26:39.465] Server  LOG     ✓ Compiled in 1616ms
+[35:26:49.979] Server  LOG     ✓ Compiled in 125ms
+[35:26:56.440] Server  LOG     ✓ Compiled in 120ms
+[35:27:15.021] Server  LOG     ✓ Compiled in 157ms
+[35:27:21.055] Server  LOG     ✓ Compiled in 118ms
+[35:27:25.444] Server  LOG     ✓ Compiled in 158ms
+[35:27:32.126] Server  LOG     ✓ Compiled in 151ms
+[35:27:39.816] Server  LOG     ✓ Compiled in 136ms
+[35:27:44.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[35:27:45.043] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. allowTransparency allowtransparency
+[35:27:45.043] Browser WARN    Image with src "/_next/static/media/logo_final.f8870aac.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[35:27:49.052] Server  LOG     ✓ Compiled in 388ms
+[35:29:18.589] Server  LOG     ✓ Compiled in 1030ms
+[35:29:47.464] Server  LOG     ✓ Compiled in 132ms
+[35:29:53.403] Server  LOG     ✓ Compiled in 130ms
+[35:30:02.451] Server  LOG     ✓ Compiled in 271ms
+[35:30:05.889] Server  LOG     ✓ Compiled in 146ms
+[35:30:11.390] Server  LOG     ✓ Compiled in 251ms
+[35:30:13.481] Server  LOG     ✓ Compiled in 132ms
+[35:30:19.120] Server  LOG     ✓ Compiled in 124ms
+[35:30:26.995] Server  LOG     ✓ Compiled in 187ms
+[35:30:45.397] Server  LOG     ✓ Compiled in 202ms
+[35:30:59.656] Server  LOG     ✓ Compiled in 160ms
+[35:31:41.347] Server  LOG     ✓ Compiled in 230ms
+[35:31:49.478] Server  LOG     ✓ Compiled in 176ms
+[43:31:05.675] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[43:31:11.378] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'substring')
