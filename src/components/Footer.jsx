@@ -219,23 +219,41 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row items-center justify-between"
         >
-          <p className="text-[11px] text-ivory/40 uppercase tracking-[0.25em] font-light mb-6 md:mb-0">
-            © {currentYear} Dream of Dance. Curated for Artists.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="mb-6 md:mb-0"
+          >
+            <p className="text-[10px] text-gold/50 uppercase tracking-[0.2em] font-medium">
+              Designed & Developed by <a href="https://deegonic.com/" target="_blank" rel="noopener noreferrer" className="text-gold/80 hover:text-gold cursor-pointer transition-colors">Deegonic</a>
+            </p>
+          </motion.div>
 
-          <div className="flex items-center space-x-6 text-[11px] text-ivory/40 uppercase tracking-widest font-light">
-            <Link href="/privacy" className="hover:text-gold transition-colors duration-300">
-              Privacy
-            </Link>
-            <span className="text-gold/20">•</span>
-            <Link href="/terms" className="hover:text-gold transition-colors duration-300">
-              Terms
-            </Link>
-            <span className="text-gold/20">•</span>
-            <Link href="/sitemap" className="hover:text-gold transition-colors duration-300">
-              Sitemap
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-8"
+          >
+            <p className="text-[11px] text-ivory/40 uppercase tracking-[0.25em] font-light">
+              © {currentYear} Dream of Dance
+            </p>
+            
+            <div className="flex items-center space-x-6 text-[11px] text-ivory/40 uppercase tracking-widest font-light">
+              <Link href="/privacy" className="hover:text-gold transition-colors duration-300">
+                Privacy
+              </Link>
+              <span className="text-gold/20">•</span>
+              <Link href="/terms" className="hover:text-gold transition-colors duration-300">
+                Terms
+              </Link>
+              <span className="text-gold/20">•</span>
+              <Link href="/sitemap" className="hover:text-gold transition-colors duration-300">
+                Sitemap
+              </Link>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 

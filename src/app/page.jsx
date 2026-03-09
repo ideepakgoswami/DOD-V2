@@ -26,6 +26,7 @@ import raviPhoto from "../assets/images/ravi.webp";
 import Competition from "../assets/images/Competition.jpg";
 import Summer_Camp from "../assets/images/Summer_Camp.jpg";
 import Workshop from "../assets/images/Workshop.jpg";
+import Ladies_batch from "../assets/images/Ladies_batch.jpg";
 const Home = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -180,10 +181,10 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
   ];
 
   const studioGallery = [
-    "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    groupPhoto.src,
+    Ladies_batch.src,
+    Summer_Camp.src,
+    Workshop.src,
   ];
 
   const upcomingEvents = [
@@ -772,14 +773,9 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
               >
                 <Quote className="text-gold/20 absolute top-8 right-8 w-12 h-12" />
                 <p className="text-ivory leading-relaxed font-normal italic mb-10 text-lg">"{t.quote}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-gold/30">
-                    <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-cinzel text-sm">{t.name}</h4>
-                    <p className="text-gold/60 text-[10px] uppercase tracking-widest">{t.location}</p>
-                  </div>
+                <div className="mt-auto">
+                  <h4 className="text-white font-cinzel text-sm">{t.name}</h4>
+                  <p className="text-gold/60 text-[10px] uppercase tracking-widest">{t.location}</p>
                 </div>
               </motion.div>
             ))}
