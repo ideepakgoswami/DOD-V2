@@ -5,46 +5,26 @@ import { Heart, Lightbulb, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 const Story = () => {
-  const timelineEvents = [
+  const experienceFeatures = [
     {
-      year: "2016",
-      title: "The Vision Begins",
-      description:
-        "Founded with a single dream: to redefine dance education as a holistic artistic journey.",
-      icon: Lightbulb,
+      title: "Artistic Excellence",
+      description: "We push the boundaries of creativity, blending tradition with modern innovation to create unique dance experiences.",
+      icon: Sparkles,
     },
     {
-      year: "2018",
-      title: "Studio Launch",
-      description:
-        "Opened our first luxury studio with state-of-the-art facilities in downtown.",
-      icon: Heart,
-    },
-    {
-      year: "2020",
-      title: "Community Growth",
-      description:
-        "Expanded to 500+ active students and launched pro services for events.",
+      title: "Expert Guidance",
+      description: "Our mentors are industry veterans with years of experience in national reality shows and global stages.",
       icon: Users,
     },
     {
-      year: "2024",
-      title: "Legacy in Motion",
-      description:
-        "Recognized as the premier dance boutique, inspiring artists across the region.",
-      icon: Sparkles,
+      title: "Luxury Environment",
+      description: "Train in an inspiring, premium studio space equipped with professional flooring and state-of-the-art facilities.",
+      icon: Heart,
     },
     {
-      year: "2025",
-      title: "New Branch",
-      description: "Opened our Krishna Nagar branch.",
-      icon: Sparkles,
-    },
-    {
-      year: "Present",
-      title: "Brahmpuri Branch",
-      description: "Our current main branch in Brahmpuri, Delhi.",
-      icon: Sparkles,
+      title: "Holistic Development",
+      description: "We focus on technical precision, emotional expression, and building confidence in every student.",
+      icon: Lightbulb,
     },
   ];
 
@@ -110,7 +90,7 @@ const Story = () => {
           animate={{ opacity: 1 }}
           className="text-gold tracking-[0.4em] uppercase text-xs font-montserrat font-light mb-4"
         >
-          Our Journey
+          About Dream of Dance
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -118,7 +98,7 @@ const Story = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl lg:text-7xl font-cinzel font-bold mb-8"
         >
-          Our Story
+          About Us
         </motion.h1>
         <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
         <motion.p
@@ -216,7 +196,7 @@ const Story = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Experience Section */}
       <section className="max-w-7xl mx-auto mb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -225,74 +205,40 @@ const Story = () => {
           className="text-center mb-20"
         >
           <p className="text-gold tracking-[0.4em] uppercase text-xs font-montserrat font-light mb-4">
-            Our Timeline
+            The DOD Experience
           </p>
           <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-8">
-            A Journey of Growth
+            Why We Lead
           </h2>
           <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="relative"
-        >
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-gold via-gold/50 to-transparent hidden lg:block" />
-
-          <div className="space-y-12">
-            {timelineEvents.map((event, index) => {
-              const Icon = event.icon;
-              const isEven = index % 2 === 0;
-
-              return (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className={`grid lg:grid-cols-2 gap-8 items-center relative`}
-                >
-                  {/* Content - Alternating sides */}
-                  <div className={isEven ? "lg:col-start-1" : "lg:col-start-2"}>
-                    <motion.div
-                      whileHover={{ y: -5 }}
-                      className="bg-charcoal-light/50 border border-gold/20 hover:border-gold/60 backdrop-blur-md rounded-xl p-8 transition-all duration-300 shadow-lg hover:shadow-luxury-gold"
-                    >
-                      <div className="flex items-start space-x-4 mb-4">
-                        <div className="p-3 bg-gold/10 border border-gold/30 rounded-lg flex-shrink-0">
-                          <Icon className="w-6 h-6 text-gold" />
-                        </div>
-                        <div>
-                          <p className="text-gold tracking-[0.3em] uppercase text-xs font-semibold font-montserrat">
-                            {event.year}
-                          </p>
-                          <h3 className="text-2xl font-cinzel font-bold text-ivory mt-1">
-                            {event.title}
-                          </h3>
-                        </div>
-                      </div>
-                      <p className="text-ivory/70 font-light leading-relaxed">
-                        {event.description}
-                      </p>
-                    </motion.div>
-                  </div>
-
-                  {/* Timeline Dot */}
-                  <div className="hidden lg:flex justify-center">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      className="w-6 h-6 rounded-full bg-gold border-4 border-charcoal shadow-lg shadow-gold/50 relative z-10"
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {experienceFeatures.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-charcoal-light/40 border border-gold/20 p-8 rounded-2xl hover:border-gold/60 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gold/10 border border-gold/30 rounded-lg flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-gold" />
+                </div>
+                <h3 className="text-xl font-cinzel font-bold text-ivory mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-ivory/70 font-light leading-relaxed text-sm">
+                  {feature.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
       </section>
 
       {/* Values Section */}
@@ -426,7 +372,7 @@ const Story = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-6">
-            Be Part of Our Story
+            Join the Dream
           </h2>
           <p className="text-ivory/70 text-lg font-light max-w-3xl mx-auto mb-12 leading-relaxed">
             Every dancer who walks through our doors becomes part of the Dream

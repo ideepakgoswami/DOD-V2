@@ -26,7 +26,7 @@ const Navbar = () => {
     { title: "Home", path: "/" },
     { title: "Training", path: "/training" },
     { title: "Gallery", path: "/gallery" },
-    { title: "Our Story", path: "/story" },
+    { title: "About Us", path: "/story" },
     { title: "Connect", path: "/connect" },
   ];
 
@@ -68,7 +68,10 @@ const Navbar = () => {
                 onMouseEnter={() => setProServicesDropdown(true)}
                 onMouseLeave={() => setProServicesDropdown(false)}
               >
-                <div className="flex items-center gap-1 cursor-pointer text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-colors">
+                <Link
+                  href="/pro-services#events"
+                  className="flex items-center gap-1 cursor-pointer text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-colors"
+                >
                   Pro Services
                   <ChevronDown
                     size={16}
@@ -76,7 +79,7 @@ const Navbar = () => {
                       proServicesDropdown ? "rotate-180" : ""
                     }`}
                   />
-                </div>
+                </Link>
                 <AnimatePresence>
                   {proServicesDropdown && (
                     <motion.div
@@ -84,20 +87,22 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 bg-charcoal/95 backdrop-blur-xl border border-gold/30 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-56"
                     >
-                      <div className="p-2 space-y-1">
-                        {proServicesMenuItems.map((item) => (
-                          <Link
-                            key={item.path}
-                            href={item.path}
-                            onClick={() => setProServicesDropdown(false)}
-                            className="group flex items-center px-4 py-3 text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-all duration-300 hover:bg-gold/5"
-                          >
-                            <span className="w-0 group-hover:w-2 h-[1px] bg-gold mr-0 group-hover:mr-3 transition-all duration-300" />
-                            {item.title}
-                          </Link>
-                        ))}
+                      <div className="bg-charcoal/95 backdrop-blur-xl border border-gold/30 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+                        <div className="p-2 space-y-1">
+                          {proServicesMenuItems.map((item) => (
+                            <Link
+                              key={item.path}
+                              href={item.path}
+                              onClick={() => setProServicesDropdown(false)}
+                              className="group flex items-center px-4 py-3 text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-all duration-300 hover:bg-gold/5"
+                            >
+                              <span className="w-0 group-hover:w-2 h-[1px] bg-gold mr-0 group-hover:mr-3 transition-all duration-300" />
+                              {item.title}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -158,16 +163,24 @@ const Navbar = () => {
 
               {/* Pro Services Mobile Dropdown */}
               <div className="w-full text-center">
-                <button 
-                  onClick={() => setProServicesDropdown(!proServicesDropdown)}
-                  className="flex items-center justify-center gap-4 mx-auto text-3xl font-cinzel tracking-[0.2em] text-gold hover:text-ivory outline-none"
-                >
-                  Pro Services
-                  <ChevronDown 
-                    size={28} 
-                    className={`transition-transform duration-500 text-gold/50 ${proServicesDropdown ? "rotate-180 text-gold" : ""}`} 
-                  />
-                </button>
+                <div className="flex items-center justify-center gap-4 mx-auto">
+                  <Link
+                    href="/pro-services#events"
+                    onClick={() => setIsOpen(false)}
+                    className="text-3xl font-cinzel tracking-[0.2em] text-gold hover:text-ivory outline-none"
+                  >
+                    Pro Services
+                  </Link>
+                  <button 
+                    onClick={() => setProServicesDropdown(!proServicesDropdown)}
+                    className="outline-none"
+                  >
+                    <ChevronDown 
+                      size={28} 
+                      className={`transition-transform duration-500 text-gold/50 ${proServicesDropdown ? "rotate-180 text-gold" : ""}`} 
+                    />
+                  </button>
+                </div>
                 
                 <AnimatePresence>
                   {proServicesDropdown && (

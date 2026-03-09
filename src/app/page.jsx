@@ -38,7 +38,7 @@ const Home = () => {
       description: "Comprehensive training programs designed to transform passionate beginners into professional performers.",
       ctas: [
         { text: "Start Training", link: "/training", primary: true },
-        { text: "View Programs", link: "/pro-services", primary: false },
+        { text: "View Programs", link: "/pro-services#events", primary: false },
       ],
     },
     {
@@ -422,7 +422,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                   className="inline-flex items-center text-gold hover:text-white transition-all duration-300 group text-sm uppercase tracking-[0.3em] font-bold py-4"
                 >
                   <span className="relative">
-                    Our Studio Story
+                    Find Out More About Us
                     <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-gold/50 group-hover:bg-white transition-colors" />
                   </span>
                   <ChevronRight

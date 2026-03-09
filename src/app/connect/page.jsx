@@ -15,19 +15,97 @@ const Connect = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  const [errors, setErrors] = useState({});
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    let tempErrors = {};
+    if (!formData.firstName.trim()) tempErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) tempErrors.lastName = "Last name is required";
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const cleanPhone = formData.phone.replace(/\D/g, "");
+
+    if (!formData.email.trim() && !formData.phone.trim()) {
+      tempErrors.email = "Email or Phone is required";
+      tempErrors.phone = "Email or Phone is required";
+    } else {
+      if (formData.email.trim() && !emailRegex.test(formData.email)) {
+        tempErrors.email = "Please enter a valid email address";
+      }
+      if (formData.phone.trim() && !phoneRegex.test(cleanPhone)) {
+        tempErrors.phone = "Please enter a valid 10-digit phone number";
+      }
+    }
+
+    if (!formData.message.trim()) tempErrors.message = "Please enter your message";
+    
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    // --- GOOGLE FORM CONFIGURATION ---
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeipLK-zXBvT0gjAxCuQwT57qsZ_bQHaVhFzWphMzUUFZeMOg/formResponse";
+    
+    const entryIds = {
+      firstName: "entry.547779292",
+      lastName: "entry.1492766981",
+      email: "entry.1393274855",
+      phone: "entry.590843961",
+      interest: "entry.794409786",
+      message: "entry.1046751562"
+    };
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append(entryIds.firstName, formData.firstName);
+    formDataToSubmit.append(entryIds.lastName, formData.lastName);
+    formDataToSubmit.append(entryIds.email, formData.email);
+    formDataToSubmit.append(entryIds.phone, formData.phone);
+    formDataToSubmit.append(entryIds.interest, formData.interestedIn);
+    formDataToSubmit.append(entryIds.message, formData.message);
+
+    try {
+      // Send to Google Forms (using no-cors mode to bypass CORS issues)
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataToSubmit,
+      });
+
+      // Data sent successfully (or at least attempted in no-cors)
       setIsSubmitting(false);
       setSubmitSuccess(true);
+
+      // --- WHATSAPP REDIRECT ---
+      const whatsappNumber = "919560832548"; 
+      const text = `Hi Dream of Dance Studio! I'm ${formData.firstName} ${formData.lastName}. 
+I just visited your website and I'm interested in ${formData.interestedIn}.
+My Email: ${formData.email}
+My Phone: ${formData.phone}
+Message: ${formData.message}`;
+      
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      
+      // Delay redirect slightly so they see the success message
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+      }, 1000);
+
+      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -37,9 +115,12 @@ const Connect = () => {
         message: "",
       });
 
-      // Reset success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsSubmitting(false);
+      alert("Something went wrong. Please try again or contact us via phone.");
+    }
   };
 
   const contactCards = [
@@ -56,7 +137,7 @@ const Connect = () => {
     },
     {
       icon: Phone,
-      title: "+91 98765 43210",
+      title: "+919560832548",
       subtitle: "Direct Line",
       items: [
         "Mon - Fri: 11:00 AM - 7:00 PM",
@@ -64,15 +145,15 @@ const Connect = () => {
         "Sun: By Appointment",
       ],
       color: "gold",
-      href: "tel:+919876543210",
+      href: "tel:+919560832548",
     },
     {
       icon: Mail,
-      title: "hello@dreamofdance.com",
+      title: "dod@dreamofdance.com",
       subtitle: "Inquiries",
       items: ["Academy Classes", "Pro Services", "Private Sessions"],
       color: "ivory",
-      href: "mailto:hello@dreamofdance.com",
+      href: "mailto:dod@dreamofdance.com",
     },
     {
       icon: Clock,
@@ -165,7 +246,7 @@ const Connect = () => {
                       <div className="w-12 h-12 bg-gold/10 border border-gold/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all duration-300">
                         <Icon className="w-6 h-6 text-gold" />
                       </div>
-                      <h3 className="text-lg font-cinzel font-bold text-ivory mb-2 line-clamp-2 group-hover:text-gold transition-colors">
+                      <h3 className="text-lg font-cinzel font-bold text-ivory mb-2 break-all group-hover:text-gold transition-colors">
                         {card.title}
                       </h3>
                       <p className="text-gold/80 text-xs uppercase tracking-widest font-semibold mb-6">
@@ -193,7 +274,7 @@ const Connect = () => {
                     <div className="w-12 h-12 bg-gold/10 border border-gold/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all duration-300">
                       <Icon className="w-6 h-6 text-gold" />
                     </div>
-                    <h3 className="text-lg font-cinzel font-bold text-ivory mb-2">
+                    <h3 className="text-lg font-cinzel font-bold text-ivory mb-2 break-all">
                       {card.title}
                     </h3>
                     <p className="text-gold/80 text-xs uppercase tracking-widest font-semibold mb-6">
@@ -329,9 +410,9 @@ const Connect = () => {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         placeholder="Your first name"
-                        className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40"
-                        required
+                        className={`w-full bg-charcoal/40 border ${errors.firstName ? 'border-rose-500' : 'border-gold/20'} rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40`}
                       />
+                      {errors.firstName && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.firstName}</p>}
                     </div>
                     <div>
                       <label className="text-xs uppercase tracking-widest text-gold/80 font-semibold mb-3 block">
@@ -343,9 +424,9 @@ const Connect = () => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         placeholder="Your last name"
-                        className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40"
-                        required
+                        className={`w-full bg-charcoal/40 border ${errors.lastName ? 'border-rose-500' : 'border-gold/20'} rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40`}
                       />
+                      {errors.lastName && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.lastName}</p>}
                     </div>
                   </div>
 
@@ -355,14 +436,14 @@ const Connect = () => {
                       Email Address
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your@email.com"
-                      className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40"
-                      required
+                      className={`w-full bg-charcoal/40 border ${errors.email ? 'border-rose-500' : 'border-gold/20'} rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40`}
                     />
+                    {errors.email && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.email}</p>}
                   </div>
 
                   {/* Phone */}
@@ -371,13 +452,14 @@ const Connect = () => {
                       Phone Number
                     </label>
                     <input
-                      type="tel"
+                      type="text"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+91 (Optional)"
-                      className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40"
+                      placeholder="+91 (10 digits)"
+                      className={`w-full bg-charcoal/40 border ${errors.phone ? 'border-rose-500' : 'border-gold/20'} rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 hover:border-gold/40`}
                     />
+                    {errors.phone && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.phone}</p>}
                   </div>
 
                   {/* Interest */}
@@ -415,9 +497,9 @@ const Connect = () => {
                       onChange={handleInputChange}
                       placeholder="Tell us about your inquiry or project..."
                       rows="5"
-                      className="w-full bg-charcoal/40 border border-gold/20 rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 resize-none hover:border-gold/40"
-                      required
+                      className={`w-full bg-charcoal/40 border ${errors.message ? 'border-rose-500' : 'border-gold/20'} rounded-lg p-4 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 resize-none hover:border-gold/40`}
                     />
+                    {errors.message && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.message}</p>}
                   </div>
 
                   {/* Submit Button */}

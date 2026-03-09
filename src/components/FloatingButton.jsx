@@ -46,16 +46,93 @@ const FloatingButton = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    let tempErrors = {};
+    if (!formData.name.trim()) tempErrors.name = "Name is required";
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const cleanPhone = formData.phone.replace(/\D/g, "");
+
+    if (!formData.email.trim() && !formData.phone.trim()) {
+      tempErrors.email = "Required";
+      tempErrors.phone = "Required";
+    } else {
+      if (formData.email.trim() && !emailRegex.test(formData.email)) {
+        tempErrors.email = "Invalid email";
+      }
+      if (formData.phone.trim() && !phoneRegex.test(cleanPhone)) {
+        tempErrors.phone = "Invalid number";
+      }
+    }
+
+    if (!formData.message.trim()) tempErrors.message = "Required";
+    
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    setFormData({ name: "", phone: "", email: "", message: "" });
-    setIsOpen(false);
+    if (!validateForm()) return;
+    
+    // --- GOOGLE FORM CONFIGURATION ---
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeipLK-zXBvT0gjAxCuQwT57qsZ_bQHaVhFzWphMzUUFZeMOg/formResponse";
+    
+    // Using same entry IDs as Connect page
+    const entryIds = {
+      firstName: "entry.547779292",
+      lastName: "entry.1492766981", 
+      email: "entry.1393274855",
+      phone: "entry.590843961",
+      interest: "entry.794409786",
+      message: "entry.1046751562"
+    };
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append(entryIds.firstName, formData.name); // Full Name to First Name
+    formDataToSubmit.append(entryIds.lastName, ""); 
+    formDataToSubmit.append(entryIds.email, formData.email);
+    formDataToSubmit.append(entryIds.phone, formData.phone);
+    formDataToSubmit.append(entryIds.interest, "Floating Button Inquiry");
+    formDataToSubmit.append(entryIds.message, formData.message);
+
+    try {
+      // Send to Google Forms
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataToSubmit,
+      });
+
+      // --- WHATSAPP REDIRECT ---
+      const whatsappNumber = "919560832548"; 
+      const text = `Hi Dream of Dance! I'm ${formData.name}. 
+Email: ${formData.email}
+Phone: ${formData.phone}
+Message: ${formData.message}`;
+      
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      
+      window.open(whatsappUrl, "_blank");
+
+      // Reset form
+      setFormData({ name: "", phone: "", email: "", message: "" });
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   if (!isVisible) {
@@ -96,9 +173,9 @@ const FloatingButton = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Your name"
-                    className="w-full bg-charcoal/40 border border-gold/20 p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40"
-                    required
+                    className={`w-full bg-charcoal/40 border ${errors.name ? 'border-rose-500' : 'border-gold/20'} p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40`}
                   />
+                  {errors.name && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.name}</p>}
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
@@ -107,26 +184,28 @@ const FloatingButton = () => {
                       Phone
                     </label>
                     <input
-                      type="tel"
+                      type="text"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+91"
-                      className="w-full bg-charcoal/40 border border-gold/20 p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40"
+                      className={`w-full bg-charcoal/40 border ${errors.phone ? 'border-rose-500' : 'border-gold/20'} p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40`}
                     />
+                    {errors.phone && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.phone}</p>}
                   </div>
                   <div>
                     <label className="text-xs uppercase tracking-widest text-gold/80 font-semibold mb-2 block">
                       Email
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your@email.com"
-                      className="w-full bg-charcoal/40 border border-gold/20 p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40"
+                      className={`w-full bg-charcoal/40 border ${errors.email ? 'border-rose-500' : 'border-gold/20'} p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40`}
                     />
+                    {errors.email && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -138,10 +217,11 @@ const FloatingButton = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell us about your inquiry..."
+                    placeholder="Tell us about..."
                     rows="3"
-                    className="w-full bg-charcoal/40 border border-gold/20 p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40 resize-none"
+                    className={`w-full bg-charcoal/40 border ${errors.message ? 'border-rose-500' : 'border-gold/20'} p-3 text-sm text-ivory placeholder-ivory/30 focus:border-gold/60 outline-none transition-all duration-300 rounded-lg backdrop-blur-sm hover:border-gold/40 resize-none`}
                   />
+                  {errors.message && <p className="text-rose-500 text-[10px] mt-1 uppercase tracking-widest">{errors.message}</p>}
                 </div>
               </div>
 
@@ -164,7 +244,7 @@ const FloatingButton = () => {
               {/* Quick Contact Links */}
               <div className="grid grid-cols-2 gap-2 pt-4 border-t border-gold/20">
                 <a
-                  href="tel:+919990001111"
+                  href="tel:+919560832548"
                   className="flex items-center justify-center space-x-2 bg-charcoal/30 hover:bg-gold/10 border border-gold/20 hover:border-gold/50 p-3 rounded-lg transition-all duration-300 group text-xs"
                 >
                   <Phone
@@ -176,7 +256,7 @@ const FloatingButton = () => {
                   </span>
                 </a>
                 <a
-                  href="mailto:info@dodstudio.com"
+                  href="mailto:dod@dreamofdancestudio.com"
                   className="flex items-center justify-center space-x-2 bg-charcoal/30 hover:bg-gold/10 border border-gold/20 hover:border-gold/50 p-3 rounded-lg transition-all duration-300 group text-xs"
                 >
                   <Mail

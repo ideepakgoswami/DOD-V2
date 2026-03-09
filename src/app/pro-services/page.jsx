@@ -191,6 +191,7 @@ const ProServices = () => {
       const hash = window.location.hash.substring(1);
       if (hash === "events" || hash === "fitness") {
         setActiveCategory(hash);
+        // Scroll to the categories section if we are navigating via hash
         const section = document.getElementById("services-category-toggle");
         if (section) {
           setTimeout(() => section.scrollIntoView({ behavior: "smooth" }), 100);
@@ -198,13 +199,25 @@ const ProServices = () => {
       }
     };
 
-    // Run once on mount
+    // Run once on mount to handle initial hash
     handleHashChange();
 
     // Listen for hash changes
     window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []); 
+    
+    // Also check on a short interval as a fallback for some Next.js routing edge cases
+    const interval = setInterval(() => {
+        const currentHash = window.location.hash.substring(1);
+        if ((currentHash === "events" || currentHash === "fitness") && currentHash !== activeCategory) {
+            setActiveCategory(currentHash);
+        }
+    }, 500);
+
+    return () => {
+        window.removeEventListener("hashchange", handleHashChange);
+        clearInterval(interval);
+    };
+  }, [activeCategory]); 
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -218,11 +231,16 @@ const ProServices = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.3, ease: "easeIn" },
     },
   };
 
@@ -280,6 +298,7 @@ const ProServices = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
+                setActiveCategory(category.id);
                 router.push(`#${category.id}`);
                 setSelectedService(null);
               }}
@@ -296,60 +315,63 @@ const ProServices = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="max-w-7xl mx-auto mb-24">
-        <motion.div
-          key={activeCategory}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid md:grid-cols-2 gap-8"
-        >
-          {currentServices.map((service) => {
-            const Icon = service.icon;
+      <section className="max-w-7xl mx-auto mb-24 min-h-[600px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="grid md:grid-cols-2 gap-8"
+          >
+            {currentServices.map((service) => {
+              const Icon = service.icon;
 
-            return (
-              <motion.div
-                key={service.id}
-                variants={cardVariants}
-                whileHover={{ y: -10 }}
-                onClick={() => setSelectedService(service)}
-                className="group relative overflow-hidden rounded-2xl border border-gold/20 hover:border-gold/60 transition-all duration-300 cursor-pointer h-96"
-              >
-                {/* Background Image */}
-                <img
-                  src={service.image?.src || service.image}
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/60 to-charcoal/80 group-hover:via-charcoal/80 transition-all duration-300" />
+              return (
+                <motion.div
+                  key={service.id}
+                  variants={cardVariants}
+                  whileHover={{ y: -10 }}
+                  onClick={() => setSelectedService(service)}
+                  className="group relative overflow-hidden rounded-2xl border border-gold/20 hover:border-gold/60 transition-all duration-300 cursor-pointer h-96"
+                >
+                  {/* Background Image */}
+                  <img
+                    src={service.image?.src || service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/60 to-charcoal/80 group-hover:via-charcoal/80 transition-all duration-300" />
 
-                {/* Content */}
-                <div className="relative h-full flex flex-col justify-between p-8 z-10">
-                  <div>
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className="w-12 h-12 bg-gold/20 border border-gold/40 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-all duration-300"
-                    >
-                      <Icon className="w-6 h-6 text-gold" />
-                    </motion.div>
-                    <h3 className="text-3xl font-cinzel font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gold/80 text-sm font-montserrat uppercase tracking-widest font-light">
-                      {service.tagline}
-                    </p>
+                  {/* Content */}
+                  <div className="relative h-full flex flex-col justify-between p-8 z-10">
+                    <div>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        className="w-12 h-12 bg-gold/20 border border-gold/40 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-all duration-300"
+                      >
+                        <Icon className="w-6 h-6 text-gold" />
+                      </motion.div>
+                      <h3 className="text-3xl font-cinzel font-bold text-white mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-gold/80 text-sm font-montserrat uppercase tracking-widest font-light">
+                        {service.tagline}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-ivory/80 font-light text-sm leading-relaxed">
+                        {service.desc}
+                      </p>
+                    </div>
                   </div>
-
-                  <div>
-                    <p className="text-ivory/80 font-light text-sm leading-relaxed">
-                      {service.desc}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </AnimatePresence>
       </section>
 
       {/* Details Modal */}

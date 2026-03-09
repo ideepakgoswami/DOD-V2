@@ -49,7 +49,7 @@ const Footer = () => {
     {
       title: "Contact",
       items: [
-        { text: "dod@dreamofdancestudio.com", href: "mailto:dod@dreamofdancestudio.com" },
+        { text: "dod@dreamofdance.com", href: "mailto:dod@dreamofdance.com" },
         { text: "+91 9560832548", href: "tel:+919560832548" }
       ],
       icon: Mail,
@@ -58,8 +58,8 @@ const Footer = () => {
       title: "Programs",
       items: [
         { text: "Wedding Choreography", href: "/training" },
-        { text: "Dance Competitions", href: "/pro-services" },
-        { text: "Workshops", href: "/pro-services" },
+        { text: "Dance Competitions", href: "/pro-services#events" },
+        { text: "Workshops", href: "/pro-services#events" },
         { text: "Fitness Classes", href: "/pro-services#fitness" },
       ],
       icon: Music,
@@ -70,7 +70,7 @@ const Footer = () => {
         { text: "School Events", href: "/pro-services#events" },
         { text: "College Events", href: "/pro-services#events" },
         { text: "Dance Events", href: "/pro-services#events" },
-        { text: "Masterclasses", href: "/pro-services" },
+        { text: "Masterclasses", href: "/pro-services#events" },
       ],
       icon: Zap,
     },

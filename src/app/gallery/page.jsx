@@ -3,18 +3,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 📸 ADD YOUR OWN PHOTOS HERE
-//
-// Steps:
-//  1. Drop your photo into the matching folder inside  public/gallery/<category>/
-//  2. Add an entry below pointing to it:
-//       { title: "My Photo Title", category: "Events", image: "/gallery/events/my-photo.jpg" }
-//
-// Available categories: Events | Performance | Fitness | Academy | Production
-//
-// If you leave this array empty, placeholder images will show instead.
-// ─────────────────────────────────────────────────────────────────────────────
 const MY_GALLERY_PHOTOS = [
   // ── Events ──────────────────────────────────────────────────────────────
   {
@@ -234,9 +222,6 @@ const PLACEHOLDER_PHOTOS = [
   },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Merge: your photos first, then any placeholder categories not yet covered
-// ─────────────────────────────────────────────────────────────────────────────
 function buildGallery() {
   return MY_GALLERY_PHOTOS;
 }
