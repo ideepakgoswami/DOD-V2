@@ -3,159 +3,250 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+// ─────────────────────────────────────────────────────────────────────────────
+// 📸 ADD YOUR OWN PHOTOS HERE
+//
+// Steps:
+//  1. Drop your photo into the matching folder inside  public/gallery/<category>/
+//  2. Add an entry below pointing to it:
+//       { title: "My Photo Title", category: "Events", image: "/gallery/events/my-photo.jpg" }
+//
+// Available categories: Events | Performance | Fitness | Academy | Production
+//
+// If you leave this array empty, placeholder images will show instead.
+// ─────────────────────────────────────────────────────────────────────────────
+const MY_GALLERY_PHOTOS = [
+  // ── Events ──────────────────────────────────────────────────────────────
+  {
+    title: "Event Photo 1",
+    category: "Events",
+    image: "/gallery/events/event_photo_1.jpg",
+  },
+  {
+    title: "Event Photo 2",
+    category: "Events",
+    image: "/gallery/events/event_photo_2.jpg",
+  },
+  {
+    title: "Event Photo 3",
+    category: "Events",
+    image: "/gallery/events/event_photo_3.jpg",
+  },
+  {
+    title: "Event Photo 4",
+    category: "Events",
+    image: "/gallery/events/event_photo_4.jpg",
+  },
+  {
+    title: "Event Photo 5",
+    category: "Events",
+    image: "/gallery/events/event_photo_5.jpg",
+  },
+
+  // ── Performance ─────────────────────────────────────────────────────────
+  {
+    title: "Performance 1",
+    category: "Performance",
+    image: "/gallery/performance/performance_1.jpg",
+  },
+  {
+    title: "Performance 2",
+    category: "Performance",
+    image: "/gallery/performance/performance_2.jpg",
+  },
+  {
+    title: "Performance 3",
+    category: "Performance",
+    image: "/gallery/performance/performance_3.jpg",
+  },
+  {
+    title: "Performance 4",
+    category: "Performance",
+    image: "/gallery/performance/performance_4.jpg",
+  },
+  {
+    title: "Performance 5",
+    category: "Performance",
+    image: "/gallery/performance/performance_5.jpg",
+  },
+  {
+    title: "Performance 6",
+    category: "Performance",
+    image: "/gallery/performance/performance_6.jpg",
+  },
+  {
+    title: "Performance 7",
+    category: "Performance",
+    image: "/gallery/performance/performance_7.jpg",
+  },
+  {
+    title: "Performance 8",
+    category: "Performance",
+    image: "/gallery/performance/performance_8.jpg",
+  },
+
+  // ── Fitness ─────────────────────────────────────────────────────────────
+
+  // ── Academy ─────────────────────────────────────────────────────────────
+  {
+    title: "Academy 1",
+    category: "Academy",
+    image: "/gallery/academy/academy_1.jpg",
+  },
+  {
+    title: "Academy 2",
+    category: "Academy",
+    image: "/gallery/academy/academy_2.jpg",
+  },
+
+  // ── Production ──────────────────────────────────────────────────────────
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Fallback placeholder images (Unsplash) — used when MY_GALLERY_PHOTOS is empty
+// or to fill categories that have no custom photos yet.
+// ─────────────────────────────────────────────────────────────────────────────
+const PLACEHOLDER_PHOTOS = [
+  // Events
+  {
+    title: "Wedding Sangeet Performance",
+    category: "Events",
+    image:
+      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "School Annual Day Performance",
+    category: "Events",
+    image:
+      "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Festival Performance",
+    category: "Events",
+    image:
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "College Fest Choreography",
+    category: "Events",
+    image:
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+  },
+  // Performance
+  {
+    title: "Contemporary Dance Performance",
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Stage Dance Showcase",
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1504609773096-104ff2176d0b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Group Dance Performance",
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1524594684888-c55847b4b629?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Solo Dance Performance",
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
+  },
+  // Fitness
+  {
+    title: "Zumba Fitness Class",
+    category: "Fitness",
+    image:
+      "https://images.unsplash.com/photo-1534294-4f3d1f1a0a4b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Aerobic Dance Fitness",
+    category: "Fitness",
+    image:
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Yoga & Flexibility Training",
+    category: "Fitness",
+    image:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Cardio Dance Workout",
+    category: "Fitness",
+    image:
+      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+  },
+  // Academy
+  {
+    title: "Academy Students Performance",
+    category: "Academy",
+    image:
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Kids Dance Training",
+    category: "Academy",
+    image:
+      "https://images.unsplash.com/photo-1504609773096-104ff2176d0b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Teen Batch Class",
+    category: "Academy",
+    image:
+      "https://images.unsplash.com/photo-1524594684888-c55847b4b629?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Adult Training Session",
+    category: "Academy",
+    image:
+      "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=800&q=80",
+  },
+  // Production
+  {
+    title: "Music Video Production",
+    category: "Production",
+    image:
+      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Behind the Scenes Shoot",
+    category: "Production",
+    image:
+      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Professional Choreography Shoot",
+    category: "Production",
+    image:
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Studio Production Setup",
+    category: "Production",
+    image:
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Merge: your photos first, then any placeholder categories not yet covered
+// ─────────────────────────────────────────────────────────────────────────────
+function buildGallery() {
+  return MY_GALLERY_PHOTOS;
+}
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // Gallery images with diverse content across all categories
-  const galleryImages = [
-    // Events - 4 images
-    {
-      id: 1,
-      title: "Wedding Sangeet Performance",
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 2,
-      title: "School Annual Day Performance",
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 3,
-      title: "Festival Performance",
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 4,
-      title: "College Fest Choreography",
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
-    },
-    // Performance - 4 images
-    {
-      id: 5,
-      title: "Contemporary Dance Performance",
-      category: "Performance",
-      image:
-        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 6,
-      title: "Stage Dance Showcase",
-      category: "Performance",
-      image:
-        "https://images.unsplash.com/photo-1504609773096-104ff2176d0b?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 7,
-      title: "Group Dance Performance",
-      category: "Performance",
-      image:
-        "https://images.unsplash.com/photo-1524594684888-c55847b4b629?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 8,
-      title: "Solo Dance Performance",
-      category: "Performance",
-      image:
-        "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
-    },
-    // Fitness - 4 images
-    {
-      id: 9,
-      title: "Zumba Fitness Class",
-      category: "Fitness",
-      image:
-        "https://images.unsplash.com/photo-1534294-4f3d1f1a0a4b?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 10,
-      title: "Aerobic Dance Fitness",
-      category: "Fitness",
-      image:
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 11,
-      title: "Yoga & Flexibility Training",
-      category: "Fitness",
-      image:
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 12,
-      title: "Cardio Dance Workout",
-      category: "Fitness",
-      image:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
-    },
-    // Academy - 4 images
-    {
-      id: 13,
-      title: "Academy Students Performance",
-      category: "Academy",
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 14,
-      title: "Kids Dance Training",
-      category: "Academy",
-      image:
-        "https://images.unsplash.com/photo-1504609773096-104ff2176d0b?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 15,
-      title: "Teen Batch Class",
-      category: "Academy",
-      image:
-        "https://images.unsplash.com/photo-1524594684888-c55847b4b629?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 16,
-      title: "Adult Training Session",
-      category: "Academy",
-      image:
-        "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=800&q=80",
-    },
-    // Production - 4 images
-    {
-      id: 17,
-      title: "Music Video Production",
-      category: "Production",
-      image:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 18,
-      title: "Behind the Scenes Shoot",
-      category: "Production",
-      image:
-        "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 19,
-      title: "Professional Choreography Shoot",
-      category: "Production",
-      image:
-        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 20,
-      title: "Studio Production Setup",
-      category: "Production",
-      image:
-        "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
+  const galleryImages = buildGallery().map((img, i) => ({ id: i + 1, ...img }));
 
   const categories = [
     "All",
@@ -163,7 +254,7 @@ const Gallery = () => {
     "Performance",
     "Fitness",
     "Academy",
-    "Production",
+    "Wedding",
   ];
 
   const filteredImages =
@@ -201,20 +292,13 @@ const Gallery = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5 },
-    },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
   return (
@@ -234,7 +318,7 @@ const Gallery = () => {
           className="text-center"
         >
           <p className="text-gold tracking-[0.4em] uppercase text-xs font-montserrat font-light mb-4">
-            Visual Showcase
+            DOD Diaries
           </p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-cinzel font-bold mb-8">
             Gallery
@@ -306,7 +390,7 @@ const Gallery = () => {
                 <img
                   src={image.image?.src || image.image}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 " //grayscale group-hover:grayscale-0
                 />
 
                 {/* Overlay */}
