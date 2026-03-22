@@ -126,30 +126,30 @@ Message: ${formData.message}`;
   const contactCards = [
     {
       icon: MapPin,
-      title: "The Studio Hub",
+      title: "DOD Studio",
       subtitle: "Visit Us",
       items: [
-        "123 Artistic Boulevard",
-        "Culture District",
-        "State 54321, India",
+        "G-3/1, Ground Floor, St. No. 6",
+        "Near Moni Baba Mandir, Brahmpuri",
+        "Delhi-110053",
       ],
       color: "rose",
     },
     {
       icon: Phone,
-      title: "+919560832548",
+      title: "+91 9560832548",
       subtitle: "Direct Line",
       items: [
-        "Mon - Fri: 11:00 AM - 7:00 PM",
-        "Sat: 10:00 AM - 6:00 PM",
-        "Sun: By Appointment",
+        "Mon - Sun: 9:00 AM - 9:00 PM",
+        "Operating same time all day",
+        "Holidays: Closed",
       ],
       color: "gold",
       href: "tel:+919560832548",
     },
     {
       icon: Mail,
-      title: "dod@dreamofdance.com",
+      title: "dod@dreamofdancestudio.com",
       subtitle: "Inquiries",
       items: ["Academy Classes", "Pro Services", "Private Sessions"],
       color: "ivory",
@@ -160,8 +160,7 @@ Message: ${formData.message}`;
       title: "Operating Hours",
       subtitle: "When We're Here",
       items: [
-        "Mon - Sat: 10:00 AM - 08:30 PM",
-        "Sun: 04:00 PM - 08:00 PM",
+        "Mon - Sun: 9:00 AM - 9:00 PM",
         "Holidays: Closed",
       ],
       color: "gold",
@@ -573,10 +572,10 @@ Message: ${formData.message}`;
                 <div>
                   <h4 className="font-cinzel font-bold text-gold mb-2 tracking-wide">Dream of Dance Studio</h4>
                   <p className="text-ivory/70 text-xs font-light leading-relaxed">
-                    G-13, Street No. 6, near Moni Baba Mandir, Block I, Brahampuri, Delhi-110053
+                    G-3/1, Ground Floor, St. No. 6, Near Moni Baba Mandir, Brahmpuri, Delhi-110053
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=G-13, Street No. 6, Brahampuri, Delhi-110053" 
+                    href="https://maps.google.com/?q=G-3/1, Ground Floor, St. No. 6, Near Moni Baba Mandir, Brahmpuri, Delhi-110053" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-block mt-4 text-[10px] uppercase tracking-[0.2em] text-gold font-bold hover:text-ivory transition-all"

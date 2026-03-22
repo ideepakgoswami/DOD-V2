@@ -53,7 +53,7 @@ const Navbar = () => {
 
             {/* Desktop */}
             <div className="hidden md:flex gap-12 items-center flex-1 justify-center">
-              {menuItems.map((i) => (
+              {menuItems.slice(0, 2).map((i) => (
                 <Link
                   key={i.path}
                   href={i.path}
@@ -108,6 +108,15 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+              {menuItems.slice(2).map((i) => (
+                <Link
+                  key={i.path}
+                  href={i.path}
+                  className="text-xs uppercase tracking-widest text-ivory/70 hover:text-gold transition-colors"
+                >
+                  {i.title}
+                </Link>
+              ))}
             </div>
 
             {/* Mobile Toggle */}
@@ -143,7 +152,7 @@ const Navbar = () => {
             </button>
 
             <div className="flex h-full flex-col items-center justify-center gap-8 px-10">
-              {menuItems.map((item, i) => (
+              {menuItems.slice(0, 2).map((item, i) => (
                 <motion.div
                   key={item.path}
                   initial={{ y: 20, opacity: 0 }}
@@ -212,6 +221,24 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+
+              {menuItems.slice(2).map((item, i) => (
+                <motion.div
+                  key={item.path}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: (i + 3) * 0.1 }}
+                  className="w-full text-center"
+                >
+                  <Link
+                    href={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className="text-3xl font-cinzel tracking-[0.2em] text-gold hover:text-ivory transition-colors inline-block pb-1 border-b border-transparent hover:border-gold/30"
+                  >
+                    {item.title}
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         )}

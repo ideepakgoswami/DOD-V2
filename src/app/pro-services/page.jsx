@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import CompetitionImg from "../../assets/images/Competition.jpg";
+import WorkshopImg from "../../assets/images/Workshop.jpg";
+import SummerCampImg from "../../assets/images/Summer_Camp.jpg";
 
 const eventServices = [
   {
@@ -21,14 +24,16 @@ const eventServices = [
     title: "Wedding Choreography",
     icon: Heart,
     tagline: "Your Love Story in Motion",
-    image: "https://images.unsplash.com/photo-1587271636175-202a82d43e33",
+    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     desc: "Transform your wedding celebration into an unforgettable visual spectacle with our bespoke choreography.",
     features: [
-      "Couples choreography",
-      "Family group performances",
-      "Sangeet performances",
-      "Professional dancers",
-      "Full production support",
+      "Ladies Sangeet",
+      "Haldi / Mehandi Function",
+      "Bride & Groom Performance",
+      "Solo Dance",
+      "Couple Dance",
+      "Family Group Dance",
+      "Bride & Groom Entry",
     ],
     highlights:
       "We create cinematic moments that tell your love story through dance. From intimate couple dances to grand ensemble performances, every move is tailored to your vision.",
@@ -39,7 +44,7 @@ const eventServices = [
     title: "Dance Competitions",
     icon: Users,
     tagline: "Platform for Talent & Glory",
-    image: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e",
+    image: CompetitionImg.src,
     desc: "We regularly host dance competitions throughout the year, providing a platform for dancers of all styles to compete and showcase their talent.",
     features: [
       "Regular competitions",
@@ -57,7 +62,7 @@ const eventServices = [
     title: "Workshops & Masterclasses",
     icon: Sparkles,
     tagline: "Learn from Industry Experts",
-    image: "https://images.unsplash.com/photo-1517524008697-84bbe3c3a9a8",
+    image: WorkshopImg.src,
     desc: "Learn directly from celebrated choreographers and dancers through our exclusive workshops and intensive masterclasses.",
     features: [
       "Expert choreographers",
@@ -75,7 +80,7 @@ const eventServices = [
     title: "School & College Events",
     icon: Award,
     tagline: "Perfect Your Events with Dance",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    image: SummerCampImg.src,
     desc: "Professional choreography and performances for school and college events, fests, and celebrations.",
     features: [
       "Event choreography",
@@ -96,7 +101,7 @@ const fitnessServices = [
     title: "Zumba Classes",
     icon: Zap,
     tagline: "Party-Like Fitness Experience",
-    image: "https://images.unsplash.com/photo-1545299438-1606cfd3ce39",
+    image: "/gallery/fitness/fitness_4.jpg",
     desc: "Experience the ultimate party workout! Zumba combines Latin rhythms with high-energy dance moves to torch calories while having incredible fun.",
     features: [
       "All-level classes available",
@@ -107,14 +112,14 @@ const fitnessServices = [
     ],
     highlights:
       "Zumba is not just a workout, it's a party! Our certified instructors create an infectious atmosphere where you'll dance, sweat, and smile. Perfect for all fitness levels and a favorite among our members.",
-    pricing: "₹500/class or ₹3000/month",
+    pricing: "1 Month ₹1200 | 3 Months ₹3000 | 6 Months ₹5500 | 12 Months ₹10000",
   },
   {
     id: 6,
     title: "Yoga Classes",
     icon: Music,
     tagline: "Balance Mind, Body & Spirit",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+    image: "/gallery/fitness/fitness_1.jpg",
     desc: "Strengthen your body, calm your mind, and find balance through authentic yoga practices suited for all fitness levels.",
     features: [
       "Beginner to advanced classes",
@@ -125,14 +130,14 @@ const fitnessServices = [
     ],
     highlights:
       "Build a stronger, more flexible body while calming your mind. Our experienced yoga instructors guide you through proven techniques to improve flexibility, strength, and mental clarity.",
-    pricing: "₹500/class or ₹3000/month",
+    pricing: "1 Month ₹1200 | 3 Months ₹3000 | 6 Months ₹5500 | 12 Months ₹10000",
   },
   {
     id: 7,
     title: "Cardio Dance Fitness",
     icon: Sparkles,
     tagline: "High-Energy Dance Cardio",
-    image: "https://images.unsplash.com/photo-1574680096145-f859b6e68e02",
+    image: "/gallery/fitness/fitness_7.jpg",
     desc: "Combine the energy of dance with cardiovascular training for maximum calorie burn and muscle toning in every session.",
     features: [
       "High-intensity intervals",
@@ -143,14 +148,14 @@ const fitnessServices = [
     ],
     highlights:
       "Burn maximum calories while having fun dancing. Our trainers combine cardio science with dance choreography to keep your heart pumping and your spirit lifted.",
-    pricing: "₹500/class or ₹3000/month",
+    pricing: "1 Month ₹1200 | 3 Months ₹3000 | 6 Months ₹5500 | 12 Months ₹10000",
   },
   {
     id: 8,
     title: "Aerobics Classes",
     icon: Heart,
     tagline: "Build Endurance & Strength",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a",
+    image: "/gallery/fitness/fitness_5.jpg",
     desc: "Build incredible stamina and strength through dynamic aerobic exercises combined with rhythmic dance choreography.",
     features: [
       "Full-body conditioning",
@@ -161,7 +166,7 @@ const fitnessServices = [
     ],
     highlights:
       "Build strong muscles and incredible endurance through our dynamic aerobics classes. Perfect for those looking to improve overall fitness, lose weight, and feel energized.",
-    pricing: "₹500/class or ₹3000/month",
+    pricing: "1 Month ₹1200 | 3 Months ₹3000 | 6 Months ₹5500 | 12 Months ₹10000",
   },
 ];
 
@@ -456,11 +461,8 @@ const ProServices = () => {
                   </p>
                 </div>
 
-                {/* Pricing and CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-gold/20">
-                  <p className="text-gold tracking-widest uppercase text-xs font-semibold">
-                    {selectedService.pricing}
-                  </p>
+                {/* CTA */}
+                <div className="flex items-center justify-end pt-4 border-t border-gold/20">
                   <Link
                     href="/connect"
                     onClick={() => setSelectedService(null)}
