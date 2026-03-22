@@ -40,8 +40,8 @@ const Footer = () => {
       title: "Locations",
       items: [
         { 
-          text: "G-13, Street No. 6, near Moni Baba Mandir, Block I, Brahampuri, Delhi-110053", 
-          href: "https://maps.google.com/?q=G-13, Street No. 6, Brahampuri, Delhi-110053" 
+          text: "G-3/1, Ground Floor, St. No. 6, Near Moni Baba Mandir, Brahmpuri, Delhi-110053", 
+          href: "https://maps.google.com/?q=G-3/1, Ground Floor, St. No. 6, Near Moni Baba Mandir, Brahmpuri, Delhi-110053" 
         }
       ],
       icon: MapPin,
@@ -67,10 +67,10 @@ const Footer = () => {
     {
       title: "Specialties",
       items: [
-        { text: "School Events", href: "/pro-services#events" },
-        { text: "College Events", href: "/pro-services#events" },
         { text: "Dance Events", href: "/pro-services#events" },
-        { text: "Masterclasses", href: "/pro-services#events" },
+        { text: "College Events", href: "/pro-services#events" },
+        { text: "School Events", href: "/pro-services#events" },
+        { text: "Dance Workshops", href: "/pro-services#events" },
       ],
       icon: Zap,
     },

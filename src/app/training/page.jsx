@@ -14,7 +14,7 @@ const Training = () => {
       id: 1,
       title: "Hip-Hop",
       suffix: "Urban & Street Culture",
-      image: "https://plus.unsplash.com/premium_photo-1710064058963-19c6443c98c3?q=80&w=1200",
+      image: "https://plus.unsplash.com/premium_photo-1710064058963-19c6443c98c3?q=80&w=826&auto=format&fit=crop&w=600&q=80",
       desc: "Master the foundations of popping, locking, and urban grooves.",
       icon: Zap,
       details: "Our Hip-Hop program covers everything from old school foundations to the latest commercial choreography styles. Perfect for those looking to build rhythm and confidence.",
@@ -24,7 +24,7 @@ const Training = () => {
       id: 2,
       title: "Contemporary",
       suffix: "Fluid Expression",
-      image: "https://images.unsplash.com/photo-1690267717892-b88473bc771c?q=80&w=1200",
+      image: "https://plus.unsplash.com/premium_photo-1719682673290-e9f508e7670b?q=80&w=828&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       desc: "Connect movement with emotion through fluid, expressive techniques.",
       icon: Star,
       details: "A beautiful fusion of modern, jazz, and ballet elements. This program focuses on breath, floor work, and tells stories through movement.",
@@ -34,7 +34,7 @@ const Training = () => {
       id: 3,
       title: "Bollywood",
       suffix: "Vibrant & Energetic",
-      image: "https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w=1200",
+      image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w=898&auto=format&fit=crop&w=600&q=80",
       desc: "Experience the high-energy, cinematic magic of Indian dance.",
       icon: Music,
       details: "Celebrate the joy of Bollywood dance. Our classes combine traditional Indian movements with modern cinematic flair for a high-energy workout and performance experience.",
@@ -42,12 +42,12 @@ const Training = () => {
     },
     {
       id: 4,
-      title: "Classical Ballet",
-      suffix: "Grace & Technicality",
-      image: "https://plus.unsplash.com/premium_photo-1661411335322-098a1c73c6b9?q=80&w=1200",
-      desc: "The ultimate foundation for posture, balance, and precision.",
+      title: "Jazz Funk",
+      suffix: "Commercial & Expressive",
+      image: "https://images.unsplash.com/photo-1602303917904-39912f325b69?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      desc: "Fierce, dynamic, and highly expressive commercial dance style.",
       icon: Star,
-      details: "Develop exceptional poise, technique, and core strength. Our ballet program follows professional standards to ensure proper muscle development and artistic growth.",
+      details: "A high-energy mix of hip hop and jazz techniques. Develop sharp, powerful movements and the performance quality needed for commercial and stage work.",
       schedule: "Mon, Wed, Fri | 4:00 PM",
     },
     {
@@ -67,27 +67,31 @@ const Training = () => {
       image: "https://images.unsplash.com/photo-1735052709927-b2ef7615b42b?q=80&w=1200",
       desc: "Bespoke routines designed for your most precious moments.",
       icon: Heart,
-      details: "We don't just teach steps; we choreograph your love story. Personalized sessions for couples, families, and group performances for weddings and special events.",
+      details: "We choreograph your love story for Ladies Sangeet, Haldi/Mehandi, Solo & Couple Dance, Family Group Dance, and the perfect Bride & Groom Entry.",
       schedule: "Flexible / Private Sessions",
     },
   ];
 
   const faqs = [
     {
-      question: "What should I wear to my first class?",
-      answer: "We recommend comfortable, breathable athletic wear. For Hip-Hop, clean sneakers are best. For Contemporary and Ballet, we suggest socks or specific dance shoes. Avoid loose jewelry."
+      question: "I'm an absolute beginner. Are these classes right for me?",
+      answer: "Absolutely! We welcome students of all skill levels. Whether you're taking your very first steps or looking to refine your technique, our expert instructors will place you in a batch that matches your pace and goals."
     },
     {
-      question: "Do I need prior experience to join?",
-      answer: "Not at all! We have batches specifically designed for absolute beginners. Our instructors will guide you through the foundations at your own pace."
+      question: "Can you prepare me for TV reality shows and dance competitions?",
+      answer: "Yes! We specialize in intensive training for national dance competitions and top-tier reality television. Our master choreographers focus on technique, expression, and stage presence to get you audition-ready."
     },
     {
-      question: "Can I take a trial class before enrolling?",
-      answer: "Yes, we offer a trial class for all our regular programs. It's a great way to experience our teaching style and studio atmosphere before committing to a full session."
+      question: "What makes the Special Ladies Batch different?",
+      answer: "Our Special Ladies Batch is a dedicated, private space for women to learn dance, focus on fitness, and build a supportive community. It is tailored for absolute comfort, confidence, and privacy."
     },
     {
-      question: "Do you offer private home sessions?",
-      answer: "While our primary training happens at our premium studio, we do offer private sessions for wedding choreography and specialized training. Contact us for custom arrangements."
+      question: "How does the Wedding Choreography process work?",
+      answer: "We start with a consultation to understand your story. From there, we design bespoke routines for your Ladies Sangeet, Haldi, Bride & Groom performances, and family groups, guiding you step-by-step to a cinematic performance."
+    },
+    {
+      question: "What should I wear to my dance sessions?",
+      answer: "Comfort is key! For Hip Hop and Jazz Funk, breathable athletic wear and clean sneakers are perfect. For Contemporary or Yoga, you may prefer dancing barefoot or wearing specific grip socks. Avoid loose jewelry."
     }
   ];
 

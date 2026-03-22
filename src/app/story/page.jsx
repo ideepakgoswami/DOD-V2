@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Lightbulb, Users, Sparkles } from "lucide-react";
+import { Heart, Lightbulb, Users, Sparkles, Music, CheckCircle, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import vinodPhoto from "../../assets/images/vinod-kashyap.jpg";
 
 const Story = () => {
   const experienceFeatures = [
@@ -28,33 +29,16 @@ const Story = () => {
     },
   ];
 
-  const values = [
+  const choreographers = [
     {
-      title: "Artistry",
-      description:
-        "We believe dance is not just movement, but a profound form of self-expression and artistic truth.",
-      icon: Sparkles,
-    },
-    {
-      title: "Excellence",
-      description:
-        "Every class, every performance, every interaction reflects our commitment to premium quality.",
-      icon: Heart,
-    },
-    {
-      title: "Community",
-      description:
-        "We foster a safe, inclusive space where dancers of all levels can grow and celebrate together.",
-      icon: Users,
-    },
-    {
-      title: "Innovation",
-      description:
-        "We continuously evolve, blending traditional techniques with contemporary choreography.",
-      icon: Lightbulb,
-    },
+      id: 1,
+      name: "Vinod Kashyap",
+      role: "Founder & Master Choreographer",
+      style: "All Dance Forms",
+      experience: "15+ Years of Industry Excellence",
+      image: vinodPhoto.src,
+    }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -98,7 +82,7 @@ const Story = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl lg:text-7xl font-cinzel font-bold mb-8"
         >
-          About Us
+          Our Story
         </motion.h1>
         <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
         <motion.p
@@ -130,7 +114,7 @@ const Story = () => {
 
               <motion.img
                 whileHover={{ scale: 1.02 }}
-                src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=800&q=80"
+                src="/gallery/academy/academy_5.jpg"
                 alt="Studio"
                 className="w-full h-[550px] object-cover shadow-2xl relative z-5 rounded-lg"
               />
@@ -196,6 +180,64 @@ const Story = () => {
         </div>
       </section>
 
+      {/* Meet Our Founder */}
+      <section className="mb-32 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col items-center mb-16 text-center">
+            <p className="text-gold tracking-[0.4em] uppercase text-xs font-montserrat font-light mb-4">
+              Our Leadership
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-glow text-gold-gradient mb-6">
+              Meet Our Founder
+            </h2>
+            <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
+            <p className="text-lg text-ivory/70 font-light leading-relaxed max-w-2xl">
+              Master the art of movement under India's elite performers. Founder Vinod Kashyap brings global stage experience and reality-TV excellence to every training session.
+            </p>
+          </div>
+
+          <div className="max-w-xl mx-auto">
+            {choreographers.map((ch, index) => (
+              <motion.div
+                key={ch.id}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                className="group relative"
+              >
+                <div className="relative h-[620px] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group-hover:border-gold/30 transition-all duration-700">
+                  <img src={ch.image} alt={ch.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]" />
+                  
+                  {/* Cinematic Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent opacity-90 group-hover:opacity-80 transition-all duration-500" />
+                  
+                  <div className="absolute bottom-10 left-10 z-10">
+                    <h3 className="text-3xl font-cinzel text-white mb-2 group-hover:text-gold transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      {ch.name}
+                    </h3>
+                    <div className="w-12 h-[2px] bg-gold mb-3" />
+                    <p className="text-gold font-montserrat text-sm uppercase tracking-[0.2em] font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                      {ch.role}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-6 px-4">
+                  <div className="flex items-center gap-3 text-ivory/80 text-sm font-light">
+                    <Music size={16} className="text-gold" />
+                    <span>{ch.style}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-ivory/80 text-sm font-light">
+                    <CheckCircle size={16} className="text-gold" />
+                    <span>{ch.experience}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section className="max-w-7xl mx-auto mb-32">
         <motion.div
@@ -241,68 +283,7 @@ const Story = () => {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="max-w-7xl mx-auto mb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <p className="text-gold tracking-[0.4em] uppercase text-xs font-montserrat font-light mb-4">
-            Our Values
-          </p>
-          <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-8">
-            The Pillars of DOD
-          </h2>
-          <div className="h-1 w-40 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
-          <p className="max-w-2xl mx-auto text-ivory/70 font-light">
-            These core values guide every decision we make and every class we
-            teach
-          </p>
-        </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {values.map((value, index) => {
-            const Icon = value.icon;
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative p-8 bg-gradient-to-br from-charcoal-light/40 to-charcoal/40 border border-gold/20 hover:border-gold/60 backdrop-blur-md rounded-xl transition-all duration-300 shadow-lg hover:shadow-luxury-gold overflow-hidden"
-              >
-                {/* Background Gradient */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gold/5 rounded-full blur-xl group-hover:bg-gold/10 transition-all duration-300" />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="w-12 h-12 mb-6 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300"
-                  >
-                    <Icon className="w-6 h-6 text-gold" />
-                  </motion.div>
-
-                  <h3 className="text-xl font-cinzel font-bold text-ivory mb-4">
-                    {value.title}
-                  </h3>
-
-                  <p className="text-ivory/60 font-light leading-relaxed text-sm">
-                    {value.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </section>
 
       {/* Team Snapshot */}
       <section className="max-w-7xl mx-auto mb-32">

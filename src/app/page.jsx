@@ -21,8 +21,6 @@ import slide1 from "../assets/images/slide1new.png";
 import slide2 from "../assets/images/slide2new.png";
 import slide3 from "../assets/images/slide3new.png";
 import groupPhoto from "../assets/images/group-photo.jpg";
-import vinodPhoto from "../assets/images/vinod-kashyap.jpg";
-import raviPhoto from "../assets/images/ravi.webp";
 import Competition from "../assets/images/Competition.jpg";
 import Summer_Camp from "../assets/images/Summer_Camp.jpg";
 import Workshop from "../assets/images/Workshop.jpg";
@@ -116,7 +114,7 @@ const Home = () => {
       id: 2,
       title: "Contemporary",
       description: "Fluid expression & emotion",
-      image: "https://images.unsplash.com/photo-1690267717892-b88473bc771c?q=80&w=1740&auto=format&fit=crop&w=600&q=80",
+      image: "https://plus.unsplash.com/premium_photo-1719682673290-e9f508e7670b?q=80&w=828&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 3,
@@ -125,36 +123,25 @@ const Home = () => {
 image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w=898&auto=format&fit=crop&w=600&q=80",    },
     {
       id: 4,
-      title: "Classical Ballet",
-      description: "Grace & technique",
-      image: "https://plus.unsplash.com/premium_photo-1661411335322-098a1c73c6b9?q=80&w=688&auto=format&fit=crop&w=600&q=80",
+      title: "Jazz Funk",
+      description: "Fierce & expressive commercial style",
+      image: "https://images.unsplash.com/photo-1571087917386-2fb7b100eba1?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 5,
-      title: "Wedding Choreography",
-      description: "Your Love Story in Motion",
-      image: "https://images.unsplash.com/photo-1735052709927-b2ef7615b42b?q=80&w=687&auto=format&fit=crop&w=600&q=80",
+      title: "Bhangra",
+      description: "High-energy traditional beats",
+      image: "https://images.unsplash.com/photo-1723637375828-a3ecfcc6636d?q=80&w=2731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 6,
+      title: "Popping",
+      description: "Electric & dynamic isolation",
+      image: "https://img.redbull.com/images/c_fill,g_auto,w_1850,h_1233/q_auto:low,f_jpg/redbullcom/2020/8/24/splbmhrz3o7dg9rm6g6k/popping-simcho",
     },
   ];
 
-  const choreographers = [
-    {
-      id: 1,
-      name: "Vinod Kashyap",
-      role: "Founder & Master Choreographer",
-      style: "All Dance Forms",
-      experience: "15+ Years of Industry Excellence",
-      image: vinodPhoto.src,
-    },
-    {
-      id: 2,
-      name: "Ravi",
-      role: "Instructor",
-      style: "Zumba & Fitness",
-      experience: "4+ Years Experience",
-      image: raviPhoto.src,
-    },
-  ];
+
 
   const testimonials = [
     {
@@ -258,9 +245,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-gold tracking-[0.4em] uppercase font-montserrat text-xs font-bold mb-6 flex items-center justify-center space-x-3"
           >
-            <Sparkles size={16} />
             <span>{currentSlide.subtitle}</span>
-            <Sparkles size={16} />
           </motion.p>
 
           {/* Main Heading */}
@@ -486,8 +471,8 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
             {[
               { number: "1500+", label: "Students Trained" },
               { number: "1000+", label: "Dance Choreographies" },
-              { number: "500+", label: "Wedding Choreographies" },
-              { number: "15+", label: "Years of Excellence" },
+              { number: "200+", label: "Wedding Choreographies" },
+              { number: "18+", label: "Years of Excellence" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -527,7 +512,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:h-[340px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {dancePrograms.map((program, index) => (
               <motion.div
                 key={program.id}
@@ -535,7 +520,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="group relative overflow-hidden rounded-[20px] cursor-pointer h-72 md:h-full border border-white/10 hover:border-gold/50 transition-all duration-500 shadow-xl"
+                className="group relative overflow-hidden rounded-[20px] cursor-pointer h-72 md:h-[340px] border border-white/10 hover:border-gold/50 transition-all duration-500 shadow-xl"
               >
                 {/* Background Image */}
                 <img
@@ -559,11 +544,6 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                   </p>
                 </div>
 
-                {/* Corner Accent Glow */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <Sparkles size={14} className="text-gold/60" />
-                </div>
-
                 {/* Subtle Border Glow on Hover */}
                 <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-[20px] transition-all duration-500 pointer-events-none" />
               </motion.div>
@@ -572,60 +552,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
         </div>
       </section>
 
-      {/* Meet Our Choreographers */}
-      <section className="py-24 px-6 lg:px-12 bg-charcoal relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-glow text-gold-gradient mb-6">Meet Our Choreographers</h2>
-              <p className="text-lg text-ivory/70 font-light leading-relaxed">Master the art of movement under India's elite performers. Our team brings global stage experience and reality-TV excellence to every training session.</p>
-            </div>
-            <Link href="/instructors" className="group text-gold uppercase tracking-[0.2em] text-xs font-bold flex items-center gap-2 pb-2 border-b border-gold/20">
-              View All Instructors <ChevronRight size={16} className="group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {choreographers.map((ch, index) => (
-              <motion.div
-                key={ch.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="group relative"
-              >
-                <div className="relative h-[620px] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group-hover:border-gold/30 transition-all duration-700">
-                  <img src={ch.image} alt={ch.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]" />
-                  
-                  {/* Cinematic Overlay - Consistent with Specialties */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent opacity-90 group-hover:opacity-80 transition-all duration-500" />
-                  
-                  <div className="absolute bottom-10 left-10 z-10">
-                    <h3 className="text-3xl font-cinzel text-white mb-2 group-hover:text-gold transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      {ch.name}
-                    </h3>
-                    <div className="w-12 h-[2px] bg-gold mb-3" />
-                    <p className="text-gold font-montserrat text-sm uppercase tracking-[0.2em] font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-                      {ch.role}
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-8 flex flex-wrap gap-6 px-4">
-                  <div className="flex items-center gap-3 text-ivory/80 text-sm font-light">
-                    <Music size={16} className="text-gold" />
-                    <span>{ch.style}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-ivory/80 text-sm font-light">
-                    <CheckCircle size={16} className="text-gold" />
-                    <span>{ch.experience}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
  {/* Upcoming Events & Updates Section */}
       <section className="py-24 px-6 lg:px-12 bg-gradient-to-b from-charcoal to-[#0A0A0A] relative overflow-hidden">
