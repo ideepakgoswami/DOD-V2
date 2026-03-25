@@ -91,8 +91,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://instagram.fdel5-3.fna.fbcdn.net" crossorigin />
-        <link rel="preconnect" href="https://static.cdninstagram.com" crossorigin />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

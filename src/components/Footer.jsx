@@ -99,10 +99,11 @@ const Footer = () => {
   return (
     <footer className="relative bg-charcoal border-t border-gold/20 overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10">
+      <section className="relative -z-10">
+        <h2 className="sr-only">Footer Navigation</h2>
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/3 rounded-full blur-3xl" />
-      </div>
+      </section>
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
@@ -181,9 +182,9 @@ const Footer = () => {
                     <Icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
                   </div>
                 )}
-                <h5 className="font-cinzel text-gold tracking-widest text-sm uppercase font-semibold mb-4">
+                <h2 className="font-cinzel text-gold tracking-widest text-sm uppercase font-semibold mb-4">
                   {section.title}
-                </h5>
+                </h2>
                 <div className="space-y-3 flex flex-col items-center">
                   {section.items.map((item, idx) => (
                     item.href.startsWith("http") || item.href.startsWith("mailto") || item.href.startsWith("tel") ? (
