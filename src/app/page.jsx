@@ -781,6 +781,8 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 scrolling="no"
                 allowtransparency="true"
                 allow="encrypted-media"
+                loading="lazy"
+                title="Dream of Dance Studio – Latest Instagram Choreography"
                 className="border-none bg-transparent max-w-full"
               ></iframe>
             </div>

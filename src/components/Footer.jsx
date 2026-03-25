@@ -117,7 +117,10 @@ const Footer = () => {
             <Image
               src={logo}
               alt="Dream of Dance Studio Logo"
+              width={280}
+              height={177}
               className="h-20 w-auto object-contain mb-4 hover:scale-105 transition-transform duration-300"
+              sizes="280px"
             />
           </Link>
           <p className="text-gold tracking-[0.4em] uppercase text-xs font-light">
