@@ -381,6 +381,7 @@ const Gallery = () => {
                   fill
                   className="object-cover transition-all duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={75}
                 />
 
                 {/* Overlay */}
@@ -438,7 +439,8 @@ const Gallery = () => {
                   alt={selectedImage.title}
                   fill
                   className="object-contain rounded-2xl border border-gold/40"
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  quality={85}
                 />
               </div>
 

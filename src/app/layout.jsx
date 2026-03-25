@@ -91,6 +91,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root { --bg-charcoal: #121212; --text-ivory: #F5F5F0; }
+          body { background-color: var(--bg-charcoal) !important; color: var(--text-ivory) !important; margin: 0; padding: 0; }
+          #nprogress .bar { background: #D4AF37 !important; }
+        `}} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
