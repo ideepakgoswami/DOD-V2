@@ -17,14 +17,15 @@ import {
   Quote,
 } from "lucide-react";
 import Link from "next/link";
-import slide1 from "../assets/images/slide1new.png";
-import slide2 from "../assets/images/slide2new.png";
-import slide3 from "../assets/images/slide3new.png";
-import groupPhoto from "../assets/images/group-photo.jpg";
-import Competition from "../assets/images/Competition.jpg";
-import Summer_Camp from "../assets/images/Summer_Camp.jpg";
-import Workshop from "../assets/images/Workshop.jpg";
-import Ladies_batch from "../assets/images/Ladies_batch.jpg";
+import Image from "next/image";
+import slide1 from "../assets/images/slide1new.webp";
+import slide2 from "../assets/images/slide2new.webp";
+import slide3 from "../assets/images/slide3new.webp";
+import groupPhoto from "../assets/images/group-photo.webp";
+import Competition from "../assets/images/Competition.webp";
+import Summer_Camp from "../assets/images/Summer_Camp.webp";
+import Workshop from "../assets/images/Workshop.webp";
+import Ladies_batch from "../assets/images/Ladies_batch.webp";
 const Home = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -217,10 +218,14 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
             className="absolute inset-0"
           >
             {/* Background Image */}
-            <img
-              src={currentSlide.image?.src || currentSlide.image}
+            <Image
+              src={currentSlide.image}
               alt={currentSlide.title}
+              fill
+              priority
+              fetchPriority="high"
               className="w-full h-full object-cover"
+              sizes="100vw"
             />
 
             {/* Overlay Gradient (Darker) */}
@@ -430,11 +435,13 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
               <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-gold/40 rounded-tr-2xl pointer-events-none" />
               <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-gold/40 rounded-bl-2xl pointer-events-none" />
 
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src={groupPhoto.src}
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl h-[500px]">
+                <Image
+                  src={groupPhoto}
                   alt="Dance Class Group"
-                  className="w-full h-[500px] object-cover transition-all duration-1000 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-all duration-1000 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 
                 {/* Cinematic Texture Overlay */}
@@ -523,10 +530,12 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 className="group relative overflow-hidden rounded-[20px] cursor-pointer h-72 md:h-[340px] border border-white/10 hover:border-gold/50 transition-all duration-500 shadow-xl"
               >
                 {/* Background Image */}
-                <img
+                <Image
                   src={program.image}
                   alt={program.title}
+                  fill
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 
                 {/* Enhanced Cinematic Overlay for better readability */}
@@ -598,10 +607,12 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                   className="group relative overflow-hidden rounded-2xl border border-white/10 hover:border-gold/80 hover:border-2 shadow-lg hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] transition-all duration-500 cursor-pointer h-[420px]"
                 >
                   {/* Background Image */}
-                  <img
-                    src={event.image?.src || event.image}
+                  <Image
+                    src={event.image}
                     alt={event.title}
+                    fill
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   
                   {/* Smooth Gradient - Fades to pure transparency at top */}
@@ -683,9 +694,7 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-cinzel text-glow text-gold-gradient mb-6">Voice of Our Dancers</h2>
-            <div className="flex justify-center gap-1 mb-8">
-              {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-gold text-gold" />)}
-            </div>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -728,7 +737,13 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                 transition={{ delay: index * 0.1 }}
                 className="relative overflow-hidden group h-full"
               >
-                <img src={img} alt="Studio Facility" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <Image
+                  src={img}
+                  alt="Studio Facility"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
                 <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-colors duration-500" />
               </motion.div>
             ))}

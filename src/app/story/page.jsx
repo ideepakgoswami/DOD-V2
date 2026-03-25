@@ -3,7 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Heart, Lightbulb, Users, Sparkles, Music, CheckCircle, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import vinodPhoto from "../../assets/images/vinod-kashyap.jpg";
+import Image from "next/image";
+import vinodPhoto from "../../assets/images/vinod-kashyap.webp";
 
 const Story = () => {
   const experienceFeatures = [
@@ -112,12 +113,18 @@ const Story = () => {
               <div className="absolute -top-8 -left-8 w-40 h-40 border-t-2 border-l-2 border-gold/60 transition-all duration-500" />
               <div className="absolute -bottom-8 -right-8 w-40 h-40 border-b-2 border-r-2 border-gold/60 transition-all duration-500" />
 
-              <motion.img
+              <motion.div
                 whileHover={{ scale: 1.02 }}
-                src="/gallery/academy/academy_5.jpg"
-                alt="Studio"
-                className="w-full h-[550px] object-cover shadow-2xl relative z-5 rounded-lg"
-              />
+                className="relative w-full h-[550px] overflow-hidden shadow-2xl z-5 rounded-lg"
+              >
+                <Image
+                  src="/gallery/academy/academy_5.webp"
+                  alt="Studio"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </motion.div>
             </div>
           </motion.div>
 
@@ -207,7 +214,13 @@ const Story = () => {
                 className="group relative"
               >
                 <div className="relative h-[620px] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group-hover:border-gold/30 transition-all duration-700">
-                  <img src={ch.image} alt={ch.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]" />
+                  <Image
+                    src={ch.image}
+                    alt={ch.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                   
                   {/* Cinematic Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent opacity-90 group-hover:opacity-80 transition-all duration-500" />

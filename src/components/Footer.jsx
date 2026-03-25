@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import logo from "../assets/images/logo_final.png";
+import logo from "../assets/images/logo_final.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -249,7 +249,7 @@ const Footer = () => {
                 Terms
               </Link>
               <span className="text-gold/20">•</span>
-              <Link href="/sitemap" className="hover:text-gold transition-colors duration-300">
+              <Link href="/sitemap.xml" className="hover:text-gold transition-colors duration-300">
                 Sitemap
               </Link>
             </div>

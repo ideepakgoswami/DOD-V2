@@ -13,10 +13,11 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import CompetitionImg from "../../assets/images/Competition.jpg";
-import WorkshopImg from "../../assets/images/Workshop.jpg";
-import SummerCampImg from "../../assets/images/Summer_Camp.jpg";
+import CompetitionImg from "../../assets/images/Competition.webp";
+import WorkshopImg from "../../assets/images/Workshop.webp";
+import SummerCampImg from "../../assets/images/Summer_Camp.webp";
 
 const eventServices = [
   {
@@ -101,7 +102,7 @@ const fitnessServices = [
     title: "Zumba Classes",
     icon: Zap,
     tagline: "Party-Like Fitness Experience",
-    image: "/gallery/fitness/fitness_4.jpg",
+    image: "/gallery/fitness/fitness_4.webp",
     desc: "Experience the ultimate party workout! Zumba combines Latin rhythms with high-energy dance moves to torch calories while having incredible fun.",
     features: [
       "All-level classes available",
@@ -119,7 +120,7 @@ const fitnessServices = [
     title: "Yoga Classes",
     icon: Music,
     tagline: "Balance Mind, Body & Spirit",
-    image: "/gallery/fitness/fitness_1.jpg",
+    image: "/gallery/fitness/fitness_1.webp",
     desc: "Strengthen your body, calm your mind, and find balance through authentic yoga practices suited for all fitness levels.",
     features: [
       "Beginner to advanced classes",
@@ -137,7 +138,7 @@ const fitnessServices = [
     title: "Cardio Dance Fitness",
     icon: Sparkles,
     tagline: "High-Energy Dance Cardio",
-    image: "/gallery/fitness/fitness_7.jpg",
+    image: "/gallery/fitness/fitness_7.webp",
     desc: "Combine the energy of dance with cardiovascular training for maximum calorie burn and muscle toning in every session.",
     features: [
       "High-intensity intervals",
@@ -155,7 +156,7 @@ const fitnessServices = [
     title: "Aerobics Classes",
     icon: Heart,
     tagline: "Build Endurance & Strength",
-    image: "/gallery/fitness/fitness_5.jpg",
+    image: "/gallery/fitness/fitness_5.webp",
     desc: "Build incredible stamina and strength through dynamic aerobic exercises combined with rhythmic dance choreography.",
     features: [
       "Full-body conditioning",
@@ -342,10 +343,12 @@ const ProServices = () => {
                   className="group relative overflow-hidden rounded-2xl border border-gold/20 hover:border-gold/60 transition-all duration-300 cursor-pointer h-96"
                 >
                   {/* Background Image */}
-                  <img
-                    src={service.image?.src || service.image}
+                  <Image
+                    src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    fill
+                    className="object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/60 to-charcoal/80 group-hover:via-charcoal/80 transition-all duration-300" />
 
@@ -398,10 +401,12 @@ const ProServices = () => {
             >
               {/* Modal Header with Image */}
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={selectedService.image?.src || selectedService.image}
+                <Image
+                  src={selectedService.image}
                   alt={selectedService.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal/90" />
 

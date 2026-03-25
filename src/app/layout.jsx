@@ -1,8 +1,23 @@
 import "./globals.css";
+import { Cinzel, Montserrat } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingButton from "../components/FloatingButton";
 import Preloader from "../components/Preloader";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cinzel",
+  weight: ["400", "600", "700", "800"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "Dream of Dance Studio | Professional Dance Training in Delhi",
@@ -76,12 +91,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://instagram.fdel5-3.fna.fbcdn.net" crossorigin />
+        <link rel="preconnect" href="https://static.cdninstagram.com" crossorigin />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="flex flex-col min-h-screen bg-charcoal text-ivory" suppressHydrationWarning>
+      <body className={`${cinzel.variable} ${montserrat.variable} flex flex-col min-h-screen bg-charcoal text-ivory font-montserrat tracking-[0.02em]`} suppressHydrationWarning>
         <Preloader />
         <Navbar />
         <main className="flex-grow">
