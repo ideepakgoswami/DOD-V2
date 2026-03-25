@@ -34,9 +34,10 @@ export default function Preloader() {
               src={logo}
               alt="Dream of Dance"
               width={200}
-              height={200}
+              height={126}
               priority
               className="object-contain opacity-90"
+              sizes="200px"
             />
             {/* Elegant loading line */}
             <div className="mt-12 w-48 h-[1px] bg-white/10 relative overflow-hidden">

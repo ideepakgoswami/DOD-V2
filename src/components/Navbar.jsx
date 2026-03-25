@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex h-20 items-center justify-between">
             <Link href="/">
-              <Image src={logo} alt="Logo" className="h-14 w-auto object-contain" priority />
+              <Image src={logo} alt="Dream of Dance Studio Logo" width={180} height={113} className="h-14 w-auto object-contain" priority />
             </Link>
 
             {/* Desktop */}
@@ -123,6 +123,7 @@ const Navbar = () => {
             <button
               className="md:hidden text-gold hover:scale-110 active:scale-90 transition-transform"
               onClick={() => setIsOpen(true)}
+              aria-label="Open navigation menu"
             >
               <Menu size={28} />
             </button>
@@ -147,6 +148,7 @@ const Navbar = () => {
             <button
               className="absolute top-8 right-8 text-gold hover:rotate-90 transition-transform duration-300"
               onClick={() => setIsOpen(false)}
+              aria-label="Close navigation menu"
             >
               <X size={36} />
             </button>
@@ -183,6 +185,7 @@ const Navbar = () => {
                   <button 
                     onClick={() => setProServicesDropdown(!proServicesDropdown)}
                     className="outline-none"
+                    aria-label="Toggle Pro Services submenu"
                   >
                     <ChevronDown 
                       size={28} 
