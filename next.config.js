@@ -26,14 +26,8 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   experimental: {
-    browsersListForSwc: true,
     forceSwcTransforms: true,
-  },
-  swcMinify: true,
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{member}}',
-    },
+    optimizePackageImports: ['lucide-react'],
   },
 }
 
