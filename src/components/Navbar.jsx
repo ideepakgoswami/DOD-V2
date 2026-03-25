@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "../assets/images/logo_final.png";
+import logo from "../assets/images/logo_final.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

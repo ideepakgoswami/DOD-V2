@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Star, Users, Zap, Music, Heart, Plus, Minus, Trophy, Target, Shield } from "lucide-react";
 import Link from "next/link";
-import Ladies from "../../assets/images/Ladies_batch.jpg";
+import Image from "next/image";
+import Ladies from "../../assets/images/Ladies_batch.webp";
 
 const Training = () => {
   const [selectedBatch, setSelectedBatch] = useState(null);
@@ -159,10 +160,12 @@ const Training = () => {
                 className="group relative h-[550px] overflow-hidden rounded-xl border border-gold/20 hover:border-gold/60 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-gold/10"
               >
                 {/* Background Image */}
-                <img
-                  src={item.image?.src || item.image}
+                <Image
+                  src={item.image}
                   alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-all duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
 
                 {/* Overlay Gradient */}
@@ -270,10 +273,12 @@ const Training = () => {
             <div className="relative">
               <div className="absolute inset-0 border border-gold/30 rounded-2xl transform translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-6 group-hover:translate-y-6" />
               <div className="h-[450px] lg:h-[550px] rounded-2xl overflow-hidden border border-gold/40 shadow-2xl">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Personal Training"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>

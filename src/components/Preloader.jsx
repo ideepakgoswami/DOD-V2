@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import logo from "../assets/images/logo_final.png"; // Ensure this matches actual path
+import logo from "../assets/images/logo_final.webp"; // Ensure this matches actual path
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ export default function Preloader() {
     // Reveal site much faster
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 

@@ -2,75 +2,76 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const MY_GALLERY_PHOTOS = [
   // ── Events ──────────────────────────────────────────────────────────────
   {
     title: "Event Photo 1",
     category: "Events",
-    image: "/gallery/events/event_photo_1.jpg",
+    image: "/gallery/events/event_photo_1.webp",
   },
   {
     title: "Event Photo 2",
     category: "Events",
-    image: "/gallery/events/event_photo_2.jpg",
+    image: "/gallery/events/event_photo_2.webp",
   },
   {
     title: "Event Photo 3",
     category: "Events",
-    image: "/gallery/events/event_photo_3.jpg",
+    image: "/gallery/events/event_photo_3.webp",
   },
   {
     title: "Event Photo 4",
     category: "Events",
-    image: "/gallery/events/event_photo_4.jpg",
+    image: "/gallery/events/event_photo_4.webp",
   },
   {
     title: "Event Photo 5",
     category: "Events",
-    image: "/gallery/events/event_photo_5.jpg",
+    image: "/gallery/events/event_photo_5.webp",
   },
 
   // ── Performance ─────────────────────────────────────────────────────────
   {
     title: "Performance 1",
     category: "Performance",
-    image: "/gallery/performance/performance_1.jpg",
+    image: "/gallery/performance/performance_1.webp",
   },
   {
     title: "Performance 2",
     category: "Performance",
-    image: "/gallery/performance/performance_2.jpg",
+    image: "/gallery/performance/performance_2.webp",
   },
   {
     title: "Performance 3",
     category: "Performance",
-    image: "/gallery/performance/performance_3.jpg",
+    image: "/gallery/performance/performance_3.webp",
   },
   {
     title: "Performance 4",
     category: "Performance",
-    image: "/gallery/performance/performance_4.jpg",
+    image: "/gallery/performance/performance_4.webp",
   },
   {
     title: "Performance 5",
     category: "Performance",
-    image: "/gallery/performance/performance_5.jpg",
+    image: "/gallery/performance/performance_5.webp",
   },
   {
     title: "Performance 6",
     category: "Performance",
-    image: "/gallery/performance/performance_6.jpg",
+    image: "/gallery/performance/performance_6.webp",
   },
   {
     title: "Performance 7",
     category: "Performance",
-    image: "/gallery/performance/performance_7.jpg",
+    image: "/gallery/performance/performance_7.webp",
   },
   {
     title: "Performance 8",
     category: "Performance",
-    image: "/gallery/performance/performance_8.jpg",
+    image: "/gallery/performance/performance_8.webp",
   },
 
   // ── Fitness ─────────────────────────────────────────────────────────────
@@ -79,12 +80,12 @@ const MY_GALLERY_PHOTOS = [
   {
     title: "Academy 1",
     category: "Academy",
-    image: "/gallery/academy/academy_1.jpg",
+    image: "/gallery/academy/academy_1.webp",
   },
   {
     title: "Academy 2",
     category: "Academy",
-    image: "/gallery/academy/academy_2.jpg",
+    image: "/gallery/academy/academy_2.webp",
   },
 
   // ── Production ──────────────────────────────────────────────────────────
@@ -372,10 +373,12 @@ const Gallery = () => {
                 className="group relative overflow-hidden rounded-2xl border border-gold/20 hover:border-gold/60 transition-all duration-300 cursor-pointer h-80"
               >
                 {/* Image */}
-                <img
-                  src={image.image?.src || image.image}
+                <Image
+                  src={image.image}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 " //grayscale group-hover:grayscale-0
+                  fill
+                  className="object-cover transition-all duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
                 {/* Overlay */}
@@ -426,11 +429,15 @@ const Gallery = () => {
               </motion.button>
 
               {/* Image */}
-              <img
-                src={selectedImage.image?.src || selectedImage.image}
-                alt={selectedImage.title}
-                className="w-full h-auto rounded-2xl border border-gold/40"
-              />
+              <div className="relative w-full h-[600px]">
+                <Image
+                  src={selectedImage.image}
+                  alt={selectedImage.title}
+                  fill
+                  className="object-contain rounded-2xl border border-gold/40"
+                  sizes="100vw"
+                />
+              </div>
 
               {/* Image Info */}
               <motion.div
