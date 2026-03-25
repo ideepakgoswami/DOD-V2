@@ -538,7 +538,8 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                   alt={program.title}
                   fill
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 450px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={70}
                 />
                 
                 {/* Enhanced Cinematic Overlay for better readability */}
@@ -615,7 +616,8 @@ image:"https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w
                     alt={event.title}
                     fill
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 450px"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={75}
                   />
                   
                   {/* Smooth Gradient - Fades to pure transparency at top */}

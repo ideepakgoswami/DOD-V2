@@ -59,6 +59,7 @@ export const StudioGallery = ({ studioGallery }) => (
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-1000"
               sizes="(max-width: 768px) 50vw, 25vw"
+              quality={70}
             />
             <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-colors duration-500" />
           </motion.div>

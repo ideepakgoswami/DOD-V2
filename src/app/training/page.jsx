@@ -166,7 +166,8 @@ const Training = () => {
                   alt={item.title}
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={75}
                 />
 
                 {/* Overlay Gradient */}
