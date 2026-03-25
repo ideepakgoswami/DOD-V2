@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Star, Users, Zap, Music, Heart, Plus, Minus, Trophy, Target, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -143,6 +143,7 @@ const Training = () => {
 
       {/* Regular Programs Grid */}
       <section className="max-w-7xl mx-auto mb-32">
+        <h2 className="sr-only">Our Training Programs</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -165,7 +166,7 @@ const Training = () => {
                   alt={item.title}
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
 
                 {/* Overlay Gradient */}

@@ -219,6 +219,7 @@ Message: ${formData.message}`;
 
       {/* Contact Cards Grid */}
       <section className="max-w-7xl mx-auto mb-24">
+        <h2 className="sr-only">Contact Information</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"

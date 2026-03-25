@@ -357,8 +357,10 @@ const Gallery = () => {
             </p>
           </motion.div>
         ) : (
-          <motion.div
-            key={activeCategory}
+          <>
+            <h2 className="sr-only">Our Gallery Collection</h2>
+            <motion.div
+              key={activeCategory}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -397,7 +399,8 @@ const Gallery = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </section>
 

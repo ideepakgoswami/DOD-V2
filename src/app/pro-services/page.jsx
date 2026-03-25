@@ -323,8 +323,10 @@ const ProServices = () => {
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto mb-24 min-h-[600px]">
         <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory}
+          <>
+            <h2 className="sr-only">Our Professional Service Packages</h2>
+            <motion.div
+              key={activeCategory}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -348,7 +350,7 @@ const ProServices = () => {
                     alt={service.title}
                     fill
                     className="object-cover transition-all duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/60 to-charcoal/80 group-hover:via-charcoal/80 transition-all duration-300" />
 
@@ -379,6 +381,7 @@ const ProServices = () => {
               );
             })}
           </motion.div>
+          </>
         </AnimatePresence>
       </section>
 
@@ -780,7 +783,7 @@ const ProServices = () => {
           </Link>
 
           <button className="px-10 py-4 border-2 border-gold/40 hover:border-gold text-ivory hover:text-gold transition-all duration-300 rounded-lg uppercase tracking-widest text-sm font-bold">
-            {activeCategory === "events" ? "View Portfolio" : "Learn More"}
+            {activeCategory === "events" ? "View Portfolio" : "Class Overview"}
           </button>
         </div>
       </motion.section>
