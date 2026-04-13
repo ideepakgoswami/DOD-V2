@@ -49,7 +49,7 @@ const Footer = () => {
     {
       title: "Contact",
       items: [
-        { text: "dod@dreamofdance.com", href: "mailto:dod@dreamofdance.com" },
+        { text: "dod@dreamofdancestudio.com", href: "mailto:dod@dreamofdancestudio.com" },
         { text: "+91 9560832548", href: "tel:+919560832548" }
       ],
       icon: Mail,
