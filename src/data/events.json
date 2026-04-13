@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "type": "Competition",
+    "title": "National Dance Championship 2024",
+    "date": "COMING SOON",
+    "description": "Compete against India's best in Zumba, Bollywood, and Hip Hop styles.",
+    "icon": "Trophy",
+    "image": "/assets/images/Competition.webp"
+  },
+  {
+    "id": 2,
+    "type": "Workshop",
+    "title": "Intensive Masterclass Series",
+    "date": "OCT 15-20, 2024",
+    "description": "Learn from industry-leading choreographers in this exclusive intensive series.",
+    "icon": "Lightbulb",
+    "image": "/assets/images/Workshop.webp"
+  },
+  {
+    "id": 3,
+    "type": "Event",
+    "title": "School & College Annual Events",
+    "date": "YEAR-ROUND",
+    "description": "Expert choreography to elevate your school & college annual celebrations.",
+    "icon": "Users",
+    "image": "/assets/images/Summer_Camp.webp"
+  }
+]

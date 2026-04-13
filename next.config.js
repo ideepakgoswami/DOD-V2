@@ -16,6 +16,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'img.redbull.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
     ],
     // Tightened to real breakpoints used by the site
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
